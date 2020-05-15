@@ -1,6 +1,7 @@
 %
 % This style file was based on the JLMR style file.
 \usepackage{amsmath}
+\usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
 \typeout{Document Style `melba-jmlr' -- Dec 2019.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
@@ -11,6 +12,7 @@
 \DeclareOption{hyperref}{\@usehypertrue}
 
 \DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
+\DeclareOption{submission}{\linenumbers}
 \ProcessOptions\relax
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -157,7 +159,7 @@
 
 %% use \begin{keywords} .. \end{keywords} for keywordss.
 \newenvironment{keywords}
-{\bgroup\leftskip 20pt\rightskip 20pt \small\noindent{\bf Keywords:} }%
+{\vskip 5pt \bgroup \leftskip 20pt \rightskip 20pt \topskip 10pt \small\noindent{\bf Keywords:} }%
 {\par\egroup\vskip 0.25ex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
