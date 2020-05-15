@@ -1,0 +1,17 @@
+Dear Editor,
+
+We are happy to submit our manuscript for peer review at the Journal of Machine Learning for Biomedical Imaging (MELBA). 
+
+[INSERT TEXT THAT DESCRIBES THE CORE CONTRIBUTIONS OF THE PAPER AND WHY IT WOULD BE SUITABLE FOR MELBA]
+
+[INSERT TEXT THAT CONFIRMS ORIGINALITY]
+E.g. “The submitted work is original (or a substantially extended version of a conference paper presented at XXXX), is not and will not be under peer review or published elsewhere until an editorial decision has been made by MELBA or the authors officially withdraw their submission.”
+
+[INSERT TEXT ABOUT ETHICAL DECLARATIONS]
+E.g. “All the authors mentioned in the manuscript have agreed to authorship, read and approved the manuscript, and given consent for submission and subsequent publication of the manuscript.” 
+“All data analyzed in this manuscript were collected with appropriate IRB approval and following relevant ethical guidelines”
+
+[INSERT TEXT THAT DISCUSSES CODE AND/OR DATA AVAILABILITY. PLEASE DISCUSS ANY FURTHER ATTEMPTS THAT PROMOTES THE REPRODUCIBILITY OF THE SUBMITTED WORK]
+E.g. “The code and data to replicate the results presented in this paper are made publicly available at: XXXX”
+
+
