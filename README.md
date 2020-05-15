@@ -1,4 +1,5 @@
 # MELBA submission template
 
-This repository will provide mandatory `LaTeX` templates for the [MELBA journal](http://melba-journal.org/) (coming soon).  
+- [`LaTeX` templates](latex) for the [MELBA journal](http://melba-journal.org/)  
+- [cover letter](cover_letter.txt) template to use during submission
 
