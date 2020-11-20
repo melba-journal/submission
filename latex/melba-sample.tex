@@ -21,17 +21,25 @@
 
 % add packages here
 
-
 % Definitions of handy macros can go here
 \newcommand{\dataset}{{\cal D}}
 \newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
 
 
-
-
-% Heading 
-% arguments are {volume}{year}{pages}{date submitted}{date published}{paper id}{author-full-names}
-\melbaheading{1}{2020}{1-48}{10/2019}{1/2020}{Dalca and Sabuncu}
+% Heading for publication (ignore during submission). 
+% arguments are:
+% {article-id}{year}{pages}{date submitted}{date published}{author-full-names}{special-issue-title}{special-issue-editors}
+%
+% Publications instructions for authors of FINAL ACCEPT papers, before uploading final proof to scholastica:
+%  article-id: This is provided upon acceptance from the Associate Editor
+%  year: the year of publication (the year you plan to upload to arXiv the final version)
+%  pages: "1-X" where X is the number of pages in this final paper (including appendices)
+%  date-submitted: Date submitted to MELBA: mm/yyyy
+%  date-published: Today's date: mm/yyyy
+%  author-full-names: Last names of all the authors, separated by commas or 'and' before final author.
+%  special-issue-title: If part of a special issue, name of the issue *as given by the Associate Editor*. Otherwise, leave blank.
+%  special-issue-editors: If part of a special issue, editors of the issue *as given by the Associate Editor*. Otherwise, leave blank.
+\melbaheading{0}{2020}{1-2}{7/2020}{10/2020}{Dalca and Sabuncu}{}{}
 
 % Short headings should be {running head} and {authors last names}
 \ShortHeadings{Autoencoder for Shapes of Brain Structures}{Dalca and Sabuncu}
@@ -49,9 +57,6 @@
 	\name Mert R. Sabuncu \email msabuncu@cornell.edu \\
 	\addr School of Electrical and Computer Engineering, Cornell University, Ithaca, NY, USA
 }
-
-% \editor{Tal Arbel, more names}
-\editors{Tal Arbel, more names}
 
 
 
@@ -113,15 +118,35 @@ where the first term captures the likelihood of the data and deformations, and t
     Awesome proof.
 \end{proof}
 
-% Acknowledgements should go at the end, before appendices and references
 
-\acks{This work was supported by NIH grants R01LM012719, R01AG053949, and the NSF NeuroNex grant 1707312.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mandatory Sections. Please complete, especially for final publication
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Acknowledgements. 
+% Please include any funding, intellectual contributions not included in the authorship, and any other acknowledgements. 
+\acks{This work was supported by grants X, Y and Z. We also acknowledge important conversations with our colleagues A, B and C.}
+
+% Ethical Standards.
+% Please edit with the appropriate ethics considerations for your work. Include any pertinent IRB information, etc.
+% 
+% Please note that the submission requirements included:
+% The work presented must follow appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.
+\ethics{The work follows appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.}
+
+% Conflict of Interest
+% Declaration of possible conflicts of interest: Authors must disclose any financial, organisational, commercial or personal conflicts of interest that might bias their work.  
+% If no conflicts, please say "We declare we don't have conflicts of interest."
+\coi{The conflicts of interest have not been entered yet.}
+
+
 
 % Manual newpage inserted to improve layout of sample file - not
 % needed in general before appendices/bibliography.
 % \newpage
 
-\appendix
+\appendix % optional
 \section*{Appendix A.}
 
 

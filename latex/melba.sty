@@ -185,7 +185,7 @@
 
 %% Changeable parameters.
 \setlength\aftertitskip{0.1in plus 0.2in minus 0.2in}
-\setlength\beforetitskip{0.05in plus 0.08in minus 0.08in}
+\setlength\beforetitskip{-0.1in plus 0.08in minus 0.08in}
 \setlength\interauthorskip{0.08in plus 0.1in minus 0.1in}
 \setlength\aftermaketitskip{0.3in plus 0.1in minus 0.1in}
 
@@ -216,12 +216,12 @@
 
   \vskip \aftermaketitskip
   
-  \noindent \@starteditor \@editors \@endeditor
+  %\noindent \@starteditor \@editors \@endeditor
   \vskip \aftermaketitskip
 }}
 
-\def\editor#1{\gdef\@editor{#1}}
-\def\editors#1{\gdef\@editors{#1}}
+%\def\editor#1{\gdef\@editor{#1}}
+%\def\editors#1{\gdef\@editors{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -239,10 +239,30 @@
 
 \def\firstpageno#1{\setcounter{page}{#1}}
 
-\def\melbaheading#1#2#3#4#5#6{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
-\def\@oddhead{\scriptsize Journal of Machine Learning for Biomedical Imaging #1 (#2) #3 \hfill Submitted #4; Published #5}%
-\def\@oddfoot{\parbox[t]{\textwidth}{\raggedright \scriptsize \copyright #2 #6.\\[5pt] 
-License: CC-BY 4.0, see \url{https://creativecommons.org/licenses/by/4.0/}. \\ An electronic copy of this paper can be found at \url{http://melba-journal.org/papers/#2/v#1}.\hfill}}
+
+\def\melbaheading#1#2#3#4#5#6#7#8{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
+
+
+\begingroup
+	\toks0={#7}%
+	\edef\param{\the\toks0}%
+	\expandafter\endgroup
+\ifx\param\empty
+	\def\@oddhead{\parbox[t]{\textwidth}
+		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #2:#1. pp #3 
+			\hfill Submitted #4; Published #5}}%
+	\def\@oddfoot{\parbox[t]{\textwidth}
+		{\raggedright \scriptsize \copyright #2 #6. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
+		An electronic copy of this paper can be found at \url{http://papers.melba-journal.org}. \hfill}}
+\else
+	\def\@oddhead{\parbox[t]{\textwidth}
+		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #2:#1. pp #3  \hfill Submitted #4; Published #5 \\ 
+			Special Issue: #7 }}%
+	\def\@oddfoot{\parbox[t]{\textwidth}
+		{\raggedright \vspace{-0.5cm} \scriptsize \copyright #2 #6. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
+			Guest Editors: #8 \\
+		An electronic copy of this paper can be found at \url{http://papers.melba-journal.org}. \hfill}}
+\fi
 
 \def\@evenhead{}\def\@evenfoot{}}%
 \thispagestyle{melbatps}}
@@ -303,7 +323,15 @@ License: CC-BY 4.0, see \url{https://creativecommons.org/licenses/by/4.0/}. \\ A
 
 % Acknowledgments
 \long\def\acks#1{\vskip 0.3in\noindent{\large\bf Acknowledgments}\vskip 0.2in
+	\noindent #1}
+
+% Ethics
+\long\def\ethics#1{\vskip 0.3in\noindent{\large\bf Ethical Standards}\vskip 0.2in
 \noindent #1}
+
+% COI
+\long\def\coi#1{\vskip 0.3in\noindent{\large\bf Conflicts of Interest}\vskip 0.2in
+	\noindent #1}
 
 % Research Note
 \long\def\researchnote#1{\noindent {\LARGE\it Research Note} #1}
