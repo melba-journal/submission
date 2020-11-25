@@ -6,3 +6,4 @@
 - MELBA [special issues list](assets/special_issues_list.md)
 
 
+If you have questions or concerns, please feel free to ask questions on the Issues board or editors@melba-journal.org, or do Pull Requests where appropriate.
