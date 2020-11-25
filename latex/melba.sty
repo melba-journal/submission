@@ -240,28 +240,28 @@
 \def\firstpageno#1{\setcounter{page}{#1}}
 
 
-\def\melbaheading#1#2#3#4#5#6#7#8{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
+\def\melbaheading#1#2#3#4#5#6#7#8#9{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
 
 
 \begingroup
-	\toks0={#7}%
+	\toks0={#8}%
 	\edef\param{\the\toks0}%
 	\expandafter\endgroup
 \ifx\param\empty
 	\def\@oddhead{\parbox[t]{\textwidth}
-		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #2:#1. pp #3 
-			\hfill Submitted #4; Published #5}}%
+		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #3:#1. pp #4 
+			\hfill Submitted #5; Published #6}}%
 	\def\@oddfoot{\parbox[t]{\textwidth}
-		{\raggedright \scriptsize \copyright #2 #6. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
-		An electronic copy of this paper can be found at \url{http://papers.melba-journal.org}. \hfill}}
+		{\raggedright \scriptsize \copyright #3 #4. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
+		\url{#2}. \hfill}}
 \else
 	\def\@oddhead{\parbox[t]{\textwidth}
-		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #2:#1. pp #3  \hfill Submitted #4; Published #5 \\ 
-			Special Issue: #7 }}%
+		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #3:#1. pp #4  \hfill Submitted #5; Published #6 \\ 
+			Special Issue: #8 }}%
 	\def\@oddfoot{\parbox[t]{\textwidth}
-		{\raggedright \vspace{-0.5cm} \scriptsize \copyright #2 #6. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
-			Guest Editors: #8 \\
-		An electronic copy of this paper can be found at \url{http://papers.melba-journal.org}. \hfill}}
+		{\raggedright \vspace{-0.5cm} \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
+			Guest Editors: #9 \\
+		\url{#2}. \hfill}}
 \fi
 
 \def\@evenhead{}\def\@evenfoot{}}%
