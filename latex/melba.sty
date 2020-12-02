@@ -11,9 +11,12 @@
 \DeclareOption{nohyperref}{\@usehyperfalse}
 \DeclareOption{hyperref}{\@usehypertrue}
 
+\newif\if@submit\@submitfalse
 \DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
-\DeclareOption{submission}{\linenumbers}
+\DeclareOption{submission}{\linenumbers\@submittrue}
 \ProcessOptions\relax
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             REQUIRED PACKAGES
@@ -242,26 +245,32 @@
 
 \def\melbaheading#1#2#3#4#5#6#7#8#9{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
 
-
-\begingroup
-	\toks0={#8}%
-	\edef\param{\the\toks0}%
-	\expandafter\endgroup
-\ifx\param\empty
+\if@submit
 	\def\@oddhead{\parbox[t]{\textwidth}
-		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #3:#1. pp #4 
-			\hfill Submitted #5; Published #6}}%
+		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. \hfill In submission}}%
 	\def\@oddfoot{\parbox[t]{\textwidth}
-		{\raggedright \scriptsize \copyright #3 #4. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
-		\url{#2}. \hfill}}
+		{\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \hfill }}	
 \else
-	\def\@oddhead{\parbox[t]{\textwidth}
-		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #3:#1. pp #4  \hfill Submitted #5; Published #6 \\ 
-			Special Issue: #8 }}%
-	\def\@oddfoot{\parbox[t]{\textwidth}
-		{\raggedright \vspace{-0.5cm} \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
-			Guest Editors: #9 \\
-		\url{#2}. \hfill}}
+	\begingroup
+		\toks0={#8}%
+		\edef\param{\the\toks0}%
+		\expandafter\endgroup
+	\ifx\param\empty
+		\def\@oddhead{\parbox[t]{\textwidth}
+			{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #3:#1. pp #4 
+				\hfill Submitted #5; Published #6}}%
+		\def\@oddfoot{\parbox[t]{\textwidth}
+			{\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
+			\url{#2}. \hfill}}
+	\else
+		\def\@oddhead{\parbox[t]{\textwidth}
+			{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #3:#1. pp #4  \hfill Submitted #5; Published #6 \\ 
+				Special Issue: #8 }}%
+		\def\@oddfoot{\parbox[t]{\textwidth}
+			{\raggedright \vspace{-0.5cm} \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
+				Guest Editors: #9 \\
+			\url{#2}. \hfill}}
+	\fi
 \fi
 
 \def\@evenhead{}\def\@evenfoot{}}%
