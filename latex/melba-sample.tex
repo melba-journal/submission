@@ -1,9 +1,9 @@
 \documentclass[twoside,11pt]{article}
 
 % melba package. use options:
-% - 'submission' for submission. 
+% - 'submission' for submission.
 % - 'final' for MELBA accepted papers only
-\usepackage[submission]{melba}  
+\usepackage[submission]{melba}
 
 
 
@@ -27,7 +27,7 @@
 \newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
 
 
-% Heading for publication (ignore during submission). 
+% Heading for publication (ignore during submission).
 % arguments are:
 % {article-id}{year}{pages}{date submitted}{date published}{author-full-names}{special-issue-title}{special-issue-editors}
 %
@@ -70,7 +70,7 @@
 
 % abstract
 \begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
-We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive. 
+We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive.
 %
 Our code is available at~\url{http://yoururl.com}.
 \end{abstract}
@@ -85,7 +85,7 @@ Our code is available at~\url{http://yoururl.com}.
 % Introduction (or first section)
 \section{Introduction}
 
-A deformable template is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals. 
+A deformable template is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,7 +97,7 @@ A deformable template is an image that can be geometrically deformed to match im
 
 Spatial alignment, or registration, between two images is a building block for estimation of deformable templates. Alignment usually involves two steps: a global affine transformation, and a deformable transformation (as in many optical flow applications).
 
-Use \verb|\cite{}| for reference that is part of the sentence, and \verb|\citep{}| for references in parenthesis. For example, \cite{viola1997alignment} is awesome. Also, this is a citation~\citep{viola1997alignment}. 
+Use \verb|\cite{}| for reference that is part of the sentence, and \verb|\citep{}| for references in parenthesis. For example, \cite{viola1997alignment} is awesome. Also, this is a citation~\citep{viola1997alignment}.
 
 
 
@@ -106,7 +106,7 @@ Use \verb|\cite{}| for reference that is part of the sentence, and \verb|\citep{
 
 \subsection{Equations}
 
-We estimate the deformable template parameters~$\theta_t$ and the deformation fields for every data point using maximum likelihood. Letting~$\mathcal{V} = \{\boldsymbol{v}_i\}$ and~$\mathcal{A} = \{a_i\}$, 
+We estimate the deformable template parameters~$\theta_t$ and the deformation fields for every data point using maximum likelihood. Letting~$\mathcal{V} = \{\boldsymbol{v}_i\}$ and~$\mathcal{A} = \{a_i\}$,
 %
 \begin{align}
 \hat{\theta_t}, \hat{\mathcal{V}} &= \arg \max_{\theta_t, \mathcal{V}} \log p_{\theta_t}(\mathcal{V} | \mathcal{X},  \mathcal{A}) \nonumber \\
@@ -126,19 +126,19 @@ where the first term captures the likelihood of the data and deformations, and t
 % Mandatory Sections. Please complete, especially for final publication
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Acknowledgements. 
-% Please include any funding, intellectual contributions not included in the authorship, and any other acknowledgements. 
+% Acknowledgements.
+% Please include any funding, intellectual contributions not included in the authorship, and any other acknowledgements.
 \acks{This work was supported by grants X, Y and Z. We also acknowledge important conversations with our colleagues A, B and C.}
 
 % Ethical Standards.
 % Please edit with the appropriate ethics considerations for your work. Include any pertinent IRB information, etc.
-% 
+%
 % Please note that the submission requirements included:
 % The work presented must follow appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.
 \ethics{The work follows appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.}
 
 % Conflict of Interest
-% Declaration of possible conflicts of interest: Authors must disclose any financial, organisational, commercial or personal conflicts of interest that might bias their work.  
+% Declaration of possible conflicts of interest: Authors must disclose any financial, organisational, commercial or personal conflicts of interest that might bias their work.
 % If no conflicts, please say "We declare we don't have conflicts of interest."
 \coi{The conflicts of interest have not been entered yet.}
 
