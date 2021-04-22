@@ -46,7 +46,7 @@ These are the final formatting and submission isntructions for MELBA **Accepted*
 
 At every step below where we ask for communication or delivery of a file, please use the scholastica [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) mechanism.
 
-1. Switch the template option to ‘final’ option in the first lines of the latex: `\usepackage[final]{melba}`
+1. Switch the template option to ‘accepted’ option in the first lines of the latex: `\usepackage[accepted]{melba}`
 2. Please populate the `\melbaheading` command options as instructed in the latex comments with the article information provided in the final acceptance email.
 3. Complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper.
 4. Upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page.
