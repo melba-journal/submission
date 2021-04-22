@@ -1,6 +1,11 @@
 melba-sample-*.tex
 melba-sample.pdf
 
+latex/.tools/*.pdf
+latex/.tools/*.tex
+latex/.tools/melba.sty
+latex/.tools/sample.bib
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
