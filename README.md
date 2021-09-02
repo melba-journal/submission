@@ -59,4 +59,5 @@ At every step below where we ask for communication or delivery of a file, please
 Melba has currently the following special issues:
 * Medical Imaging with Deep Learning (MIDL) 2020
 *Guest Editors:* Marleen de Bruijne, Tal Arbel, Ismail Ben Ayed, Hervé Lombaert
-
+* Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2020
+*Guest Editors:* Christian Baumgartner, Adrian Dalca, Carole Sudre, Ryutaro Tanno, Sandy Wells
