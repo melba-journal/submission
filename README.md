@@ -61,3 +61,5 @@ Melba has currently the following special issues:
 *Guest Editors:* Marleen de Bruijne, Tal Arbel, Ismail Ben Ayed, Hervé Lombaert
 * Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2020
 *Guest Editors:* Christian Baumgartner, Adrian Dalca, Carole Sudre, Ryutaro Tanno, Sandy Wells
+* Information Processing in Medical Imaging (IPMI) 2021
+*Guest Editors:* Aasa Feragen, Stefan Sommer, Julia Schnabel, Mads Nielsen
