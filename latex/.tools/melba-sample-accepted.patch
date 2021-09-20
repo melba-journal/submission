@@ -1,15 +1,15 @@
 --- a/latex/melba-sample.tex
 +++ b/latex/melba-sample.tex
-@@ -3,7 +3,7 @@
+@@ -2,7 +2,7 @@
+ 
  % melba package. use options:
- % - 'submission' for submission.
- % - 'accepted' for MELBA accepted papers only
--\usepackage[submission]{melba}
+ % - 'accepted' for MELBA _accepted_ papers **only**
+-\usepackage{melba}
 +\usepackage[accepted]{melba}
  
  
  
-@@ -41,7 +41,7 @@
+@@ -39,7 +39,7 @@
  %  author-full-names: Last names of all the authors, separated by commas or 'and' before final author.
  %  special-issue-title: If part of a special issue, name of the issue *as given by the Associate Editor*. Otherwise, leave blank.
  %  special-issue-editors: If part of a special issue, editors of the issue *as given by the Associate Editor*. Otherwise, leave blank.

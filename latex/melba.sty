@@ -13,11 +13,15 @@
 \DeclareOption{nohyperref}{\@usehyperfalse}
 \DeclareOption{hyperref}{\@usehypertrue}
 
-\newif\if@submit\@submitfalse
+\newif\if@accepted{\@acceptedfalse}
 \DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
-\DeclareOption{submission}{\linenumbers\@submittrue}
+\DeclareOption{accepted}{\@acceptedtrue}
 \ProcessOptions\relax
 
+\if@accepted
+\else
+\linenumbers
+\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -247,12 +251,7 @@
 
 \def\melbaheading#1#2#3#4#5#6#7#8#9{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
 
-\if@submit
-	\def\@oddhead{\parbox[t]{\textwidth}
-		{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. \hfill In submission}}%
-	\def\@oddfoot{\parbox[t]{\textwidth}
-		{\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \hfill }}	
-\else
+\if@accepted
 	\begingroup
 		\toks0={#8}%
 		\edef\param{\the\toks0}%
@@ -273,6 +272,11 @@
 				Guest Editors: #9 \\
 			\url{#2}. \hfill}}
 	\fi
+\else
+  \def\@oddhead{\parbox[t]{\textwidth}
+    {\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. \hfill In submission}}%
+  \def\@oddfoot{\parbox[t]{\textwidth}
+    {\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \hfill }}
 \fi
 
 \def\@evenhead{}\def\@evenfoot{}}%

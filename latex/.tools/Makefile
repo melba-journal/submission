@@ -7,7 +7,8 @@ MAINDIR = ..
 
 PDFS = $(MAINDIR)/melba-sample-accepted-special-issue.pdf \
 	$(MAINDIR)/melba-sample-accepted.pdf \
-	$(MAINDIR)/melba-sample-in-submission.pdf
+	$(MAINDIR)/melba-sample-in-submission.pdf \
+	$(MAINDIR)/melba-sample.pdf
 
 
 all: $(PDFS)
@@ -21,11 +22,11 @@ sample.bib: $(MAINDIR)/sample.bib
 melba-sample-%.tex: $(MAINDIR)/melba-sample.tex melba-sample-%.patch
 	patch $^ -o $@
 
-$(MAINDIR)/melba-sample-%.pdf: melba-sample-%.tex melba.sty FORCE
+$(MAINDIR)/melba-sample-%.pdf: melba-sample-%.tex melba.sty sample.bib FORCE
 	$(CC) $(CFLAGS) $<
 	cp $(@F) $@
 
-$(MAINDIR)/melba-sample.pdf: melba-sample.tex melba.sty FORCE
+$(MAINDIR)/melba-sample.pdf: $(MAINDIR)/melba-sample.tex melba.sty FORCE
 	$(CC) $(CFLAGS) $<
 	cp $(@F) $@
 
@@ -33,6 +34,7 @@ $(MAINDIR)/melba-sample.pdf: melba-sample.tex melba.sty FORCE
 clean:
 	rm -f *.aux *.bbl *.blg *.log *.fls *.fdb_latexmk
 	rm -f melba-sample-*.tex
+	rm -f *.out
 	rm -f *.tex melba.sty sample.bib
 
 FORCE:
