@@ -7,13 +7,13 @@
 -\usepackage{melba}
 +\usepackage[accepted]{melba}
  
- 
- 
-@@ -39,7 +39,7 @@
+ \usepackage{mwe} % to get dummy images, only for the example
+ % Can be removed for actual manuscripts
+@@ -42,7 +42,7 @@
  %  author-full-names: Last names of all the authors, separated by commas or 'and' before final author.
  %  special-issue-title: If part of a special issue, name of the issue *as given by the Associate Editor*. Otherwise, leave blank.
  %  special-issue-editors: If part of a special issue, editors of the issue *as given by the Associate Editor*. Otherwise, leave blank.
--\melbaheading{YYYY:NNN}{https://www.melba-journal.org/article/XX-AA}{YYYY}{1-?}{mm/yyyy}{mm/yyyy}{Dalca and Sabuncu}{}{}
+-\melbaheading{YYYY:NNN}{https://www.melba-journal.org/article/XX-AA}{YYYY}{1-?}{m1/yyyy}{m2/yyyy}{Dalca and Sabuncu}{}{}
 +\melbaheading{YYYY:NNN}{https://www.melba-journal.org/article/XX-AA}{2020}{1-2}{07/2020}{10/2020}{Dalca and Sabuncu}{}{}
  
  % Short headings should be {running head} and {authors last names}
