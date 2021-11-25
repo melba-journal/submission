@@ -4,7 +4,7 @@
 % - 'accepted' for MELBA _accepted_ papers **only**
 \usepackage{melba}
 
-
+\usepackage{mwe} % to get dummy images, only for the example
 
 
 % Any additional packages needed should be included after jmlr2e.
@@ -120,6 +120,30 @@ where the first term captures the likelihood of the data and deformations, and t
     Awesome proof.
 \end{proof}
 
+
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+\paragraph{Paragraph} Ex culpa ut commodo proident esse excepteur mollit in sed aliqua fugiat sed cupidatat dolor sint quis veniam amet aute ea fugiat quis do excepteur sunt commodo magna cupidatat veniam minim anim mollit do enim et nostrud ad esse velit nisi est dolor do ut dolore excepteur nulla ex sunt exercitation consequat ullamco ad in fugiat ut ut enim adipisicing cillum nisi anim ullamco ullamco nisi esse aute dolore amet nisi adipisicing dolor dolore do ut aliqua in sunt aliqua tempor duis amet ut non adipisicing nostrud ex ullamco excepteur culpa anim est minim fugiat laborum ex irure consectetur eu in reprehenderit sint magna ut consequat laborum ex minim laboris culpa amet incididunt laborum laborum dolore nulla cupidatat dolore in aliqua ut eu in magna sunt eiusmod est labore sit eu incididunt fugiat in culpa pariatur voluptate duis id velit sunt reprehenderit pariatur amet esse dolore minim non fugiat fugiat amet incididunt commodo sit dolor.
+
+\section{Table and Figures}
+
+\begin{table}[h] % h for Here, t for Top, b for Bottom
+	\centering
+	\caption{By convention, Table caption goes on top}
+	\begin{tabular}{lcr}
+		\textbf{Left} & \textbf{center} & \textbf{right} \\
+		\hline
+		111 & 222 & 333 \\
+		444 & 555 & 666
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{example-image}
+	\caption{Example figure. Notice that the caption goes below.}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
