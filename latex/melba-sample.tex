@@ -120,6 +120,21 @@ where the first term captures the likelihood of the data and deformations, and t
     Awesome proof.
 \end{proof}
 
+\subsection{Math styles}
+Different font styles can be used for equations:
+\begin{itemize}
+	\item \verb|$a b c A B C 1 2 3$|: $ a b c A B C 1 2 3 $
+	\item \verb|$\mathbf{a b c A B C 1 2 3}$|: $ \mathbf{a b c A B C 1 2 3} $
+	\item \verb|$\mathfrak{a b c A B C 1 2 3}$|: $ \mathfrak{a b c A B C 1 2 3} $
+	\item \verb|$\mathcal{ABC}$|: $ \mathcal{ABC} $
+	\item \verb|$\mathbb{ABC}$|: $ \mathbb{ABC} $
+\end{itemize}
+
+Text and names in equations should be dealt with the \verb|\text| command, for instance:
+
+\noindent \verb|$\mathcal L_{\text{SuperLoss}}$|: $\mathcal L_{\text{SuperLoss}}$ and not $\mathcal L_{SuperLoss}$.
+
+
 
 \section{Section}
 \subsection{Subsection}
@@ -130,7 +145,7 @@ where the first term captures the likelihood of the data and deformations, and t
 
 \begin{table}[h] % h for Here, t for Top, b for Bottom
 	\centering
-	\caption{By convention, Table caption goes on top}
+	\caption{By convention, Table caption goes on top.}
 	\begin{tabular}{lcr}
 		\textbf{Left} & \textbf{center} & \textbf{right} \\
 		\hline
