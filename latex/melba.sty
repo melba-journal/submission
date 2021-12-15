@@ -16,11 +16,18 @@
 \newif\if@accepted{\@acceptedfalse}
 \DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
 \DeclareOption{accepted}{\@acceptedtrue}
+
+\newif\if@arxiv{\@arxivfalse}
+\DeclareOption{arxiv-submission}{\@arxivtrue}
+
 \ProcessOptions\relax
 
 \if@accepted
 \else
-\linenumbers
+  \if@arxiv
+  \else % not accepted nor arxiv
+    \linenumbers
+  \fi
 \fi
 
 

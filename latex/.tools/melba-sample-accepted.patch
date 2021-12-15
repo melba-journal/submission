@@ -3,13 +3,13 @@
 @@ -2,7 +2,7 @@
  
  % melba package. use options:
- % - 'accepted' for MELBA _accepted_ papers **only**
+ % - 'accepted' for MELBA _accepted_ papers **only**;
+ % - 'arxiv-submission' for arxiv pre-print **before acceptance**.
 -\usepackage{melba}
 +\usepackage[accepted]{melba}
  
  \usepackage{mwe} % to get dummy images, only for the example
- % Can be removed for actual manuscripts
-@@ -42,7 +42,7 @@
+@@ -43,7 +43,7 @@
  %  author-full-names: Last names of all the authors, separated by commas or 'and' before final author.
  %  special-issue-title: If part of a special issue, name of the issue *as given by the Associate Editor*. Otherwise, leave blank.
  %  special-issue-editors: If part of a special issue, editors of the issue *as given by the Associate Editor*. Otherwise, leave blank.

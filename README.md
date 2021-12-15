@@ -32,6 +32,7 @@ Any new submission to Melba should be accompanied by a cover letter. Authors can
 ## Latex formatting instructions
 We provide a [minimalist latex template](latex/melba-sample.tex), requiring only the [melba.sty](latex/melba.sty) style file. Samples PDFs, from different stage during the reviewing process, are available:
 * [submission](latex/melba-sample-in-submission.pdf)
+* [arxiv-submission](latex/melba-sample-arxiv-submission.pdf)
 * [accepted](latex/melba-sample-accepted.pdf)
 * [accepted in a special issue](latex/melba-sample-accepted-special-issue.pdf)
 

@@ -8,6 +8,7 @@ MAINDIR = ..
 PDFS = $(MAINDIR)/melba-sample-accepted-special-issue.pdf \
 	$(MAINDIR)/melba-sample-accepted.pdf \
 	$(MAINDIR)/melba-sample-in-submission.pdf \
+	$(MAINDIR)/melba-sample-arxiv-submission.pdf \
 	$(MAINDIR)/melba-sample.pdf
 
 
