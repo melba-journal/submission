@@ -31,10 +31,10 @@ Any new submission to Melba should be accompanied by a cover letter. Authors can
 
 ## Latex formatting instructions
 We provide a [minimalist latex template](latex/melba-sample.tex), requiring only the [melba.sty](latex/melba.sty) style file. Samples PDFs, from different stage during the reviewing process, are available:
-* [submission](latex/melba-sample-in-submission.pdf)
-* [arxiv-submission](latex/melba-sample-arxiv-submission.pdf)
-* [accepted](latex/melba-sample-accepted.pdf)
-* [accepted in a special issue](latex/melba-sample-accepted-special-issue.pdf)
+* [submission](latex/melba-sample-in-submission.pdf): to submit a manuscript for review (mandatory, using any other template will result in a desk reject);
+* [arxiv-submission](latex/melba-sample-arxiv-submission.pdf): to upload a manuscript on arXiv while it is being reviewed (turns off line-numbers);
+* [accepted](latex/melba-sample-accepted.pdf): to use once the paper has been accepted and is moving to publication stage;
+* [accepted in a special issue](latex/melba-sample-accepted-special-issue.pdf): to use for accepted paper *that belong to a special issue only*.
 
 ### Submission
 By default, line-numbering is enabled, and any un-needed display (such as issue information) is disabled. During submission, authors **should not** modify it.
