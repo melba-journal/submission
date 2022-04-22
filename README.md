@@ -53,9 +53,10 @@ At every step below where we ask for communication or delivery of a file, please
 1. upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page;
 1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.org);
 1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website;
-1. once validated by the publishing editor, upload this final paper version to arXiv *without any further changes*. Please do **not** upload it before you have received final pdf acceptance. The arXiv Comments field **must** say *“Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org”*. If you have already uploaded an earlier preprint to arxiv (e.g. if you chose that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
-1. let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
-1. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
+1. once validated by the publishing editor, upload this final paper version to arXiv *without any further changes*. Please do **not** upload it before you have received final pdf acceptance. If you have already uploaded an earlier preprint to arxiv (e.g. if you chose that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
+2. The arXiv Comments field **must** say "*Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org/papers/YYYY:NNN.html*". `YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor;
+3. let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
+4. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
 
 
 ## Special issues
