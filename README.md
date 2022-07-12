@@ -67,5 +67,7 @@ Melba has currently the following special issues:
 *Guest Editors:* Christian Baumgartner, Adrian Dalca, Carole Sudre, Ryutaro Tanno, Sandy Wells
 * Information Processing in Medical Imaging (IPMI) 2021
 *Guest Editors:* Aasa Feragen, Stefan Sommer, Julia Schnabel, Mads Nielsen
-* MICCAI 2021 Workshops Ominibus -- DART
+* **MICCAI 2021 Workshops Ominibus -- DART**
 *Guest Editors:* Ziyue Xu, Konstantinos Kamnitsas
+* Perinatal, Preterm and Paediatric Image Analysis (PIPPI) 2021
+*Guest Editors:* Esra Abaci-Turk, Jana Hutter, Roxane Licandro, Christopher Macgowan, Andrew Melbourne
