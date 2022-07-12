@@ -61,13 +61,13 @@ At every step below where we ask for communication or delivery of a file, please
 
 ## Special issues
 Melba has currently the following special issues:
-* Medical Imaging with Deep Learning (MIDL) 2020
+* **Medical Imaging with Deep Learning (MIDL) 2020**
 *Guest Editors:* Marleen de Bruijne, Tal Arbel, Ismail Ben Ayed, Hervé Lombaert
-* Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2020
+* **Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2020**
 *Guest Editors:* Christian Baumgartner, Adrian Dalca, Carole Sudre, Ryutaro Tanno, Sandy Wells
-* Information Processing in Medical Imaging (IPMI) 2021
+* **Information Processing in Medical Imaging (IPMI) 2021**
 *Guest Editors:* Aasa Feragen, Stefan Sommer, Julia Schnabel, Mads Nielsen
 * **MICCAI 2021 Workshops Ominibus -- DART**
 *Guest Editors:* Ziyue Xu, Konstantinos Kamnitsas
-* Perinatal, Preterm and Paediatric Image Analysis (PIPPI) 2021
+* **Perinatal, Preterm and Paediatric Image Analysis (PIPPI) 2021**
 *Guest Editors:* Esra Abaci-Turk, Jana Hutter, Roxane Licandro, Christopher Macgowan, Andrew Melbourne
