@@ -4,7 +4,9 @@ This repository is used as a ressource for authors wishing to submit to the [Mel
 * [Cover letter](#cover-letter)
 * [Latex formatting instructions](#latex-formatting-instructions)
     * [Submission](#submission)
-    * [Accepted papers](#accepted-papers)
+* [Accepted papers instructions](#accepted-papers-instructions)
+    * [Camera ready](#camera-ready)
+    * [arXiv upload](#arxiv-upload)
 * [Special issues](#special-issues)
 
 Thank you for submitting to MELBA!
@@ -42,20 +44,39 @@ By default, line-numbering is enabled, and any un-needed display (such as issue 
 This correspond to the template that we provide 'as-in', authors should not need to modify anything at that stage.
 
 
-### Accepted papers
-These are the final formatting and submission isntructions for MELBA **Accepted** papers.
+## Accepted papers instructions
+These are the final formatting and submission instructions for MELBA **Accepted** papers, **please read them carefully.**
+The publishing editor will guide you through it, and _may ask for changes if you deviate from it; **which might delay final publication.**_
 
-At every step below where we ask for communication or delivery of a file, please use the scholastica [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) mechanism. The publishing editor will guide you and help you during this process.
+At every step below where we ask for communication or delivery of a file, please use the scholastica [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) mechanism.
 
-1. Switch the template option to ‘accepted’ option in the first lines of the latex: `\usepackage[accepted]{melba}`;
-1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor;
-1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper;
+### Camera ready
+
+1. Switch the template option to `accepted` in the first lines of the latex: `\usepackage[accepted]{melba}`;
+1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor ;
+1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper ;
 1. upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page;
-1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.org);
-1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website;
-1. once validated by the publishing editor, upload this final paper version to arXiv *without any further changes*. Please do **not** upload it before you have received final pdf acceptance. If you have already uploaded an earlier preprint to arxiv (e.g. if you chose that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
+1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.org) ;
+1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website ;
+1. the publishing editor will then send you a private link of the published page, please do double-check it carefully.
+
+### arXiv upload
+
+Once validated by the publishing editor (**and not before**), upload this final paper version to arXiv *without any further changes*. Please do **not** upload it before you have received final pdf acceptance. If you have already uploaded an earlier preprint to arxiv (e.g. if you chose that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
+
+Please pay attention to the following fields (`YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor):
+
+| Field | Value  |
+|-------|--------|
+| License | `CC-BY 4.0` |
+| Comment | `Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org/papers/YYYY:NNN.html` |
+| journal-ref | `Machine.Learning.for.Biomedical.Imaging. 1 (2022)` |
+
+
+
+<!-- 1. the license should be `CC-BY 4.0`;
 1. the arXiv Comments field **must** say "*Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org/papers/YYYY:NNN.html*". `YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor;
-1. moreover, the `journal-ref` field should contain `Machine.Learning.for.Biomedical.Imaging. 1 (2022)`;
+1. moreover, the `journal-ref` field should contain `Machine.Learning.for.Biomedical.Imaging. 1 (2022)`; -->
 1. let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
 1. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
 
