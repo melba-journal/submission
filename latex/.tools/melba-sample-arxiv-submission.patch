@@ -1,6 +1,6 @@
 --- a/latex/melba-sample.tex
 +++ b/latex/melba-sample.tex
-@@ -2,7 +2,7 @@
+@@ -3,7 +3,7 @@
  
  % melba package. use options:
  % - 'accepted' for MELBA _accepted_ papers **only**;
