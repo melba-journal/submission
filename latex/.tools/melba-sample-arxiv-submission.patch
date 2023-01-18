@@ -1,11 +1,13 @@
+diff --git a/latex/melba-sample.tex b/latex/melba-sample.tex
+index 227168e..40e3bc4 100644
 --- a/latex/melba-sample.tex
 +++ b/latex/melba-sample.tex
-@@ -3,7 +3,7 @@
- 
- % melba package. use options:
+@@ -4,7 +4,7 @@
+ % - 'arxiv' in arXiv pre-print in submission (disable line numbers)
  % - 'accepted' for MELBA _accepted_ papers **only**;
- % - 'arxiv-submission' for arxiv pre-print **before acceptance**.
+ % - 'specialissue' for MELBA accepted papers that are part of a special issue.
 -\usepackage{melba}
-+\usepackage[arxiv-submission]{melba}
++\usepackage[arxiv]{melba}
  
  \usepackage{mwe} % to get dummy images, only for the example
+ % Can be removed for actual manuscripts
