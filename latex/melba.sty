@@ -1,10 +1,10 @@
-% v1.01
+% v1.1
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
 \usepackage{amsmath}
 \usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' -- Dec 2019.}
+\typeout{Document Style `melba-jmlr' -- Jan 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -13,12 +13,18 @@
 \DeclareOption{nohyperref}{\@usehyperfalse}
 \DeclareOption{hyperref}{\@usehypertrue}
 
+\newif\if@arxiv{\@arxivfalse}
+\DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
+\DeclareOption{arxiv}{\@arxivtrue}
+
 \newif\if@accepted{\@acceptedfalse}
 \DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
 \DeclareOption{accepted}{\@acceptedtrue}
 
-\newif\if@arxiv{\@arxivfalse}
-\DeclareOption{arxiv-submission}{\@arxivtrue}
+\newif\if@specialissue{\@specialissuefalse}
+\DeclareOption*{\PackageWarning{melba}{Unknown ‘\CurrentOption’}}
+\DeclareOption{specialissue}{\@specialissuetrue}
+
 
 \ProcessOptions\relax
 
@@ -39,6 +45,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{natbib}
 \RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
 
 \if@usehyper
 \RequirePackage[colorlinks=false,allbordercolors={1 1 1}]{hyperref}
@@ -55,7 +62,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             P A G E   S I Z E
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
 % Change the overall width of the page.  If these parameters are
 %       changed, they will require corresponding changes in the
 %       maketitle section.
@@ -212,6 +218,7 @@
    \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}}
    \@maketitle \@thanks
  \endgroup
+ \thispagestyle{titlepage}
 \setcounter{footnote}{0}
  \let\maketitle\relax \let\@maketitle\relax
  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
@@ -247,49 +254,52 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Defines the pagestyle for the title page.
-%% Usage: \melbaheading{1}{1993}{1-15}{8/93}{9/93}{14-115}{Jane Q. Public and A. U. Thor}
-%%        \melbaheading{vol}{year}{pages}{Submitted date}{published date}{paper id}{authors}
-%%
-%% If your paper required revisions that were reviewed by the action editor, then indicate
-%%  this by, e.g.
-%%   \melbaheading{1}{1993}{1-15}{8/93; Revised 10/93}{12/93}{14-115}{Jane Q. Public and A. U. Thor}
 
-\def\firstpageno#1{\setcounter{page}{#1}}
+\def\firstpageno#1{\setcounter{page}{#1}\gdef\@firstpageno{#1}}
+\RequirePackage{lastpage}
 
+\def\melbaid#1{\gdef\@melbaid{#1}}
+\def\volume#1{\gdef\@volume{#1}}
+\def\melbaauthors#1{\gdef\@melbaauthors{#1}}
+\def\year#1{\gdef\@year{#1}}
+\def\datesubmitted#1{\gdef\@datesubmitted{#1}}
+\def\datepublished#1{\gdef\@datepublished{#1}}
 
-\def\melbaheading#1#2#3#4#5#6#7#8#9{\def\ps@melbatps{\let\@mkboth\@gobbletwo%
-
-\if@accepted
-	\begingroup
-		\toks0={#8}%
-		\edef\param{\the\toks0}%
-		\expandafter\endgroup
-	\ifx\param\empty
-		\def\@oddhead{\parbox[t]{\textwidth}
-			{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #1. pp #4
-				\hfill Submitted #5; Published #6}}%
-		\def\@oddfoot{\parbox[t]{\textwidth}
-			{\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
-			\url{#2}. \hfill}}
-	\else
-		\def\@oddhead{\parbox[t]{\textwidth}
-			{\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. #1. pp #4  \hfill Submitted #5; Published #6 \\
-				Special Issue: #8 \\
-        Guest Editors: #9 }}%
-		\def\@oddfoot{\parbox[t]{\textwidth}
-			{\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \\
-			\url{#2}. \hfill}}
-	\fi
+\gdef\@melbaspecialissue{}
+\gdef\@melbaspecialissueeditors{}
+\if@specialissue
+  \def\melbaspecialissue#1{\gdef\@melbaspecialissue{Special issue: #1}}
+  \def\melbaspecialissueeditors#1{\gdef\@melbaspecialissueeditors{Guest editors: #1}}
 \else
-  \def\@oddhead{\parbox[t]{\textwidth}
-    {\scriptsize \href{http://www.melba-journal.org}{Journal of Machine Learning for Biomedical Imaging}. \hfill In submission}}%
-  \def\@oddfoot{\parbox[t]{\textwidth}
-    {\raggedright \scriptsize \copyright #3 #7. License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}. \hfill }}
+  % Do nothing
+  \def\melbaspecialissue#1{}
+  \def\melbaspecialissueeditors#1{}
 \fi
 
-\def\@evenhead{}\def\@evenfoot{}}%
-\thispagestyle{melbatps}}
+% \setlength{\headheight}{3em}
+\if@accepted
+  \fancypagestyle{titlepage}{%
+    \fancyhf{}
+    \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging~~\@melbaid~~vol.~\@volume,~pp.~\@firstpageno--\pageref{LastPage}\\%
+    \@melbaspecialissue~\\%
+    \@melbaspecialissueeditors}
+    \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
+    ~}
+    \lfoot{\scriptsize \copyright\@year~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{https://melba-journal.org/\@melbaid}}
+    \renewcommand{\headrulewidth}{0pt}
+  }
+\else
+  \fancypagestyle{titlepage}{%
+    \fancyhf{}
+    \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging\\%
+    ~\\%
+    }
+    \rhead{\scriptsize In submission\\~\\
+    ~}
+    \lfoot{\scriptsize \copyright\@year~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\~}
+    \renewcommand{\headrulewidth}{0pt}
+  }
+\fi
 
 %% Defines the pagestyle for the rest of the pages
 %% Usage: \ShortHeadings{Minimizing Conflicts}{Minton et al}
