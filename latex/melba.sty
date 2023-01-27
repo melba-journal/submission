@@ -1,10 +1,10 @@
-% v1.1
+% v1.2 -- 2023/01/27
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
 \usepackage{amsmath}
 \usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' -- Jan 2023.}
+\typeout{Document Style `melba-jmlr' v1.2 -- Jan 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -232,9 +232,11 @@
  {\begin{center} \Large\bf \@title \par \end{center}} \vskip \aftertitskip
  {\def\and{\unskip\enspace{\rm and}\enspace}%
   \def\addr{\scriptsize}%
-  \def\email{\hfill\scriptsize}%
-  \def\name{\textbf\normalsize}%
-  \def\AND{\@endauthor\rm\hss \vskip \interauthorskip \@startauthor}
+  \def\email{\rm\hfill\scriptsize}%
+  \def\name{\normalsize}%
+  \def\firstname{\normalsize}%
+  \def\surname{\sc\normalsize}%
+  \def\AND{\@endauthor\rm\hss \vskip \interauthorskip \@startauthor}%
   \@startauthor \@author \@endauthor\rm\hss \vskip \interauthorskip  }
 
   \vskip \aftermaketitskip
