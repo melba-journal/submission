@@ -46,6 +46,7 @@
 \RequirePackage{natbib}
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
+\RequirePackage[dvipsnames]{xcolor}
 
 \if@usehyper
 \RequirePackage[colorlinks=false,allbordercolors={1 1 1}]{hyperref}
@@ -398,5 +399,20 @@
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{axiom}[theorem]{Axiom}
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               UTILS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Messy yet redable LaTeX if/elses:
+\if@accepted
+  \newcommand{\revision}[1]{#1}
+\else
+  \if@arxiv
+    \newcommand{\revision}[1]{#1}
+  \else
+    \if@specialissue
+      \newcommand{\revision}[1]{#1}
+    \else
+      \newcommand{\revision}[1]{{\color{blue} #1}}
+    \fi
+  \fi
+\fi
