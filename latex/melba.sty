@@ -1,4 +1,4 @@
-% v1.21 -- 2023/04/20
+% v1.22 -- 2023/04/20
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
@@ -268,7 +268,7 @@
 \def\melbaid#1{\gdef\@melbaid{#1}}
 \def\volume#1{\gdef\@volume{#1}}
 \def\melbaauthors#1{\gdef\@melbaauthors{#1}}
-\def\year#1{\gdef\@year{#1}}
+\def\melbayear#1{\gdef\@melbayear{#1}}
 \def\datesubmitted#1{\gdef\@datesubmitted{#1}}
 \def\datepublished#1{\gdef\@datepublished{#1}}
 
@@ -292,7 +292,7 @@
     \@melbaspecialissueeditors}
     \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
     ~}
-    \lfoot{\scriptsize \copyright\@year~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{https://melba-journal.org/\@melbaid}}
+    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{https://melba-journal.org/\@melbaid}}
     \renewcommand{\headrulewidth}{0pt}
   }
 \else
@@ -303,7 +303,7 @@
     }
     \rhead{\scriptsize In submission\\~\\
     ~}
-    \lfoot{\scriptsize \copyright\@year~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\~}
+    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\~}
     \renewcommand{\headrulewidth}{0pt}
   }
 \fi
