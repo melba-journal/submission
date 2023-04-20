@@ -1,4 +1,4 @@
-% v1.2 -- 2023/01/27
+% v1.21 -- 2023/04/20
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
@@ -220,6 +220,10 @@
    \@maketitle \@thanks
  \endgroup
  \thispagestyle{titlepage}
+ \hypersetup{
+  pdftitle={\@title},
+  pdfauthor={\@melbaauthors}
+}
 \setcounter{footnote}{0}
  \let\maketitle\relax \let\@maketitle\relax
  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
