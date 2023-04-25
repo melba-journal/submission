@@ -115,3 +115,5 @@ Melba has currently the following special issues:
 *Guest Editors:* Ziyue Xu, Konstantinos Kamnitsas
 * **Perinatal, Preterm and Paediatric Image Analysis (PIPPI) 2021**
 *Guest Editors:* Esra Abaci-Turk, Jana Hutter, Roxane Licandro, Christopher Macgowan, Andrew Melbourne
+* **MICCAI 2022 UNSURE Workshop**
+*Guest Editors:* Christian Baumgartner, Adrian Dalca, Koen Van Leemput, Raghav Mehta, Chen Qin, Carole Sudre, Ryutaro Tanno, William (Sandy) Wells
