@@ -13,23 +13,45 @@ Thank you for submitting to MELBA!
 
 ## Cover letter
 Any new submission to Melba should be accompanied by a cover letter. Authors can use the following template as a starting point:
+
+**`[PLEASE FOLLOW INSTRUCTIONS IN SQUARE BRACKETS. BEFORE SUBMISSION, ERASE ALL INSTRUCTIONS.]`**
+
+>
+> [INSERT DATE]
+>
 > Dear Editor,
 >
-> We are happy to submit our manuscript for peer review at the Journal of Machine Learning for Biomedical Imaging (MELBA).
+> We hereby submit our paper entitled:
 >
-> [INSERT TEXT THAT DESCRIBES THE CORE CONTRIBUTIONS OF THE PAPER AND WHY IT WOULD BE SUITABLE FOR MELBA]
+> [INSERT TITLE]
 >
-> [INSERT TEXT THAT CONFIRMS ORIGINALITY]
-> E.g. “The submitted work is original (or a substantially extended version of a conference paper presented at XXXX), is not and will not be under peer review or published elsewhere until an editorial decision has been made by MELBA or the authors > officially withdraw their submission.”
+> By following authors:
 >
-> [INSERT TEXT ABOUT ETHICAL DECLARATIONS]
-> E.g. “All the authors mentioned in the manuscript have agreed to authorship, read and approved the manuscript, and given > consent for submission and subsequent publication of the manuscript.”
-> “All data analyzed in this manuscript were collected with appropriate IRB approval and following relevant ethical guidelines”
+> [INSERT AUTHOR NAMES]
 >
-> [INSERT TEXT THAT DISCUSSES CODE AND/OR DATA AVAILABILITY. PLEASE DISCUSS ANY FURTHER ATTEMPTS THAT PROMOTES THE > REPRODUCIBILITY OF THE SUBMITTED WORK]
-> E.g. “The code and data to replicate the results presented in this paper are made publicly available at: XXXX”
+> We acknowledge that:
+> - All authors have approved the submission for publication and consent to its review by MELBA.
+> - Authorship implies taking full responsibility for the accuracy and originality of the content of the submission.
+> - The work presented followed all appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.
+> - [OPTIONAL, BUT ENCOURAGED] The code, models, and/or data to replicate the results presented in this paper are made publicly available at: [INSERT LINK]
 >
-> If you have questions or concerns, please feel free to ask questions on the Issues board or editors@melba-journal.org, or do Pull Requests where appropriate.
+> [PLEASE KEEP ONLY ONE OF THE FOLLOWING TWO STATEMENTS]
+>
+> This is an original submission and there is no other paper (published or under review) with significant overlapping content.
+>
+> [OR]
+>
+> This submission is an extension of a previous conference or workshop paper. [PLEASE PROVIDE REFERENCE TO THE PRIOR PAPER AND INSERT A DESCRIPTION OF THE EXTENSION WORK].
+>
+> [PLEASE DISCLOSE BELOW AND IN THE MANUSCRIPT ANY FINANCIAL, COMMERCIAL, OR PERSONAL CONFLICTS OF INTEREST THAT MIGHT HAVE BIASED YOUR WORK. IF THERE ARE NONE, PLEASE STATE SO.]
+>
+> [PLEASE DISCLOSE ANY CONFLICTS THAT MIGHT POTENTIALLY BIAS THE PEER REVIEW - E.G., AN AUTHOR HAS A CLOSE RELATIONSHIP WITH AN EDITOR. FEEL FREE TO SUGGEST EDITOR(S) AND/OR POTENTIAL REVIEWER(S) WHO SHOULD NOT BE INVOLVED IN THE EVALUATION. IF THERE ARE NO CONFLICTS/CONCERNS, PLEASE STATE SO]
+>
+>
+> Sincerely,
+>
+> [INSERT CORRESPONDING AUTHOR’S NAME AND SIGNATURE]
+
 
 ## Latex formatting instructions
 We provide a [minimalist latex template](latex/melba-sample.tex), requiring only the [melba.sty](latex/melba.sty) style file. Samples PDFs, from different stage during the reviewing process, are available:
