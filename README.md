@@ -102,9 +102,13 @@ Please pay attention to the following fields (`YYYY:NNN` is the melba paper ID t
 1. let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
 1. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
 
-
 ## Special issues
-Melba has currently the following special issues:
+The following special issues are currently open for submissions:
+* **[special issue on generative models](https://melba-journal.org/blog/010-special-issue-generative-models.html)** Deadline 2023/08/31
+* **[special issue on image registration](https://melba-journal.org/blog/012-special-issue-image-registration.html)** Deadline 2023/09/01
+
+
+Melba has currently the following published special issues:
 * **Medical Imaging with Deep Learning (MIDL) 2020**
 *Guest Editors:* Marleen de Bruijne, Tal Arbel, Ismail Ben Ayed, Hervé Lombaert
 * **Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2020**
