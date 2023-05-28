@@ -1,10 +1,10 @@
-% v1.231 -- 2023/05/02
+% v1.3 -- 2023/05/28
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
 \usepackage{amsmath}
 \usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' v1.2 -- Jan 2023.}
+\typeout{Document Style `melba-jmlr' v1.3 -- May 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -266,6 +266,7 @@
 \RequirePackage{lastpage}
 
 \def\melbaid#1{\gdef\@melbaid{#1}}
+\def\doi#1{\gdef\@doi{#1}}
 \def\volume#1{\gdef\@volume{#1}}
 \def\melbaauthors#1{\gdef\@melbaauthors{#1}}
 \def\melbayear#1{\gdef\@melbayear{#1}}
@@ -292,7 +293,7 @@
     \@melbaspecialissueeditors}
     \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
     ~}
-    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{https://melba-journal.org/\@melbaid}}
+    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{\@doi}}
     \renewcommand{\headrulewidth}{0pt}
   }
 \else
