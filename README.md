@@ -78,13 +78,8 @@ At every step below where we ask for communication or delivery of a file, please
 1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor ;
 1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper ;
 1. upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page;
-1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.org) ;
-1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website ;
-1. the publishing editor will then send you a private link of the published page, please do double-check it carefully.
-
-### arXiv upload
-
-Once validated by the publishing editor (**and not before**), upload this final paper version to arXiv *without any further changes*. Please do **not** upload it before you have received final pdf acceptance. If you have already uploaded an earlier preprint to arxiv (e.g. if you chose that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
+1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.1org) ;
+1. (Optional) authors can also send a vid1e that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
 
 Please pay attention to the following fields (`YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor):
 
