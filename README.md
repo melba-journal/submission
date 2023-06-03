@@ -88,6 +88,7 @@ Please pay attention to the following fields (`YYYY:NNN` is the melba paper ID t
 | License | `CC-BY 4.0` |
 | Comment | `Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://melba-journal.org/YYYY:NNN` |
 | journal-ref | `Machine.Learning.for.Biomedical.Imaging. 2 (2023)` |
+| DOI | value communicated by the publishing editor |
 
 
 
