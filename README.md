@@ -117,3 +117,5 @@ Melba has currently the following published special issues:
 *Guest Editors:* Esra Abaci-Turk, Jana Hutter, Roxane Licandro, Christopher Macgowan, Andrew Melbourne
 * **MICCAI 2022 UNSURE Workshop**
 *Guest Editors:* Christian Baumgartner, Adrian Dalca, Koen Van Leemput, Raghav Mehta, Chen Qin, Carole Sudre, Ryutaro Tanno, William (Sandy) Wells
+* **Machine Learning in Clinical Neuroimaging (MLCN) 2022**
+*Guest Editors:* Seyed Mostafa Kia, Mohamad Habes
