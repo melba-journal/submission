@@ -1,10 +1,10 @@
-% v1.31 -- 2023/10/10
+% v1.32 -- 2023/10/10
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
 \usepackage{amsmath}
 \usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' v1.31 -- October 2023.}
+\typeout{Document Style `melba-jmlr' v1.32 -- October 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -59,6 +59,14 @@
 \fi
 
 \bibpunct{(}{)}{;}{a}{,}{,}
+
+% Incompatibility:
+\AtBeginDocument{
+\@ifpackageloaded{times}{%
+  \PackageError{melba}{Package 'times' detected.\MessageBreak
+  This package overrides the default font. Please remove its import.%
+  }{}}{}
+}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             P A G E   S I Z E
