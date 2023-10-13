@@ -119,3 +119,5 @@ Melba has currently the following published special issues:
 *Guest Editors:* Christian Baumgartner, Adrian Dalca, Koen Van Leemput, Raghav Mehta, Chen Qin, Carole Sudre, Ryutaro Tanno, William (Sandy) Wells
 * **Machine Learning in Clinical Neuroimaging (MLCN) 2022**
 *Guest Editors:* Seyed Mostafa Kia, Mohamad Habes
+* **Perinatal, Preterm and Paediatric Image Analysis (PIPPI) 2022**
+*Guest Editors:* Jana Hutter, Roxane Licandro, Andrew Melbourne, Esra Abaci Turk, Daphna Link-Sourani, Christopher Macgowan
