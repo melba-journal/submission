@@ -75,13 +75,16 @@ At every step below where we ask for communication or delivery of a file, please
 ### Camera ready
 
 1. Switch the template option to `accepted` in the first lines of the latex: `\usepackage[accepted]{melba}`;
-1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor ;
-1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper ;
+1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor;
+1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper;
 1. upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page;
-1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.1org) ;
-1. (Optional) authors can also send a vid1e that route for submission to MELBA), please update that version instead of creating a new arXiv submission.
+1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.1org);
+1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website.
 
-Please pay attention to the following fields (`YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor):
+
+Nowadays, Melba publishes directly the papers (as opposed to initially being an arXiv-overlay), but it is still preferred that authors also upload their papers in arXiv (and other archive repository when relevant, e.g. HAL).
+**When submitting to arXiv, if a pre-print already exists, please update it instead of creating a new arXiv submission.**
+Please pay attention to the following fields (`YYYY:NNN` is the Melba paper ID that has been communicated earlier by the publishing editor):
 
 | Field | Value  |
 |-------|--------|
@@ -95,7 +98,7 @@ Please pay attention to the following fields (`YYYY:NNN` is the melba paper ID t
 <!-- 1. the license should be `CC-BY 4.0`;
 1. the arXiv Comments field **must** say "*Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org/papers/YYYY:NNN.html*". `YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor;
 1. moreover, the `journal-ref` field should contain `Machine.Learning.for.Biomedical.Imaging. 1 (2022)`; -->
-1. let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
+1. Let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
 1. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
 
 ## Special issues
