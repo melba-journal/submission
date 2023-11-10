@@ -1,4 +1,4 @@
-% v1.32 -- 2023/10/10
+% v1.33 -- 2023/11/10
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
@@ -285,7 +285,7 @@
 \gdef\@melbaspecialissueeditors{}
 \if@specialissue
   \def\melbaspecialissue#1{\gdef\@melbaspecialissue{Special issue: #1}}
-  \def\melbaspecialissueeditors#1{\gdef\@melbaspecialissueeditors{Guest editors: #1}}
+  \def\melbaspecialissueeditors#1{\gdef\@melbaspecialissueeditors{\parbox{.8\textwidth}{Guest editors: #1}}}
 \else
   % Do nothing
   \def\melbaspecialissue#1{}
