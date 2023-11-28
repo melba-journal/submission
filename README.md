@@ -124,3 +124,5 @@ Melba has currently the following published special issues:
 *Guest Editors:* Seyed Mostafa Kia, Mohamad Habes
 * **Perinatal, Preterm and Paediatric Image Analysis (PIPPI) 2022**
 *Guest Editors:* Jana Hutter, Roxane Licandro, Andrew Melbourne, Esra Abaci Turk, Daphna Link-Sourani, Christopher Macgowan
+* **Special Issue for Generative Models**
+*Guest Editors:*  Mert Sabuncu, Sotirios A. Tsaftaris
