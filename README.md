@@ -126,3 +126,5 @@ Melba has currently the following published special issues:
 *Guest Editors:* Jana Hutter, Roxane Licandro, Andrew Melbourne, Esra Abaci Turk, Daphna Link-Sourani, Christopher Macgowan
 * **Special Issue for Generative Models**
 *Guest Editors:*  Mert Sabuncu, Sotirios A. Tsaftaris
+* **Special Issue on Image Registration**
+*Guest Editors:*  Veronika Zimmer, Alessa Hering, Mattias Heinrich
