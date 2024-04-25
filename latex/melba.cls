@@ -106,7 +106,7 @@
 % \widowpenalty=10000
 % \clubpenalty=10000
 % \@twosidetrue \@mparswitchtrue \def\ds@draft{\overfullrule 5pt}
-\RequirePackage[paper=letterpaper,
+\RequirePackage[paper=a4paper,
                 top=10mm,
                 left=10mm,
                 bottom=10mm,
