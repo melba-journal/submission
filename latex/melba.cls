@@ -304,6 +304,8 @@
   {\color{melba}\bf Article informations}
 
   {\scriptsize%
+    \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\
+    \if@accepted\url{\@doi}\\\fi
     Received: \@datesubmitted, Published \@datepublished\\
     \if@specialissue\@melbaspecialissue, \@melbaspecialissueeditors\fi
   }
