@@ -1,10 +1,10 @@
-% v1.33 -- 2023/11/10
+% v2.xx -- 2023/12/XX
 % For any question, please contact publishing-editor@melba-journal.org
 
 % This style file was based on the JLMR style file.
 \usepackage{amsmath}
 \usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' v1.32 -- October 2023.}
+\typeout{Document Style `melba-jmlr' v2.xx -- 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -47,6 +47,11 @@
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+% \RequirePackage{ebgaramond}
+
+\definecolor{melba}{HTML}{4a89a3}
 
 \if@usehyper
 \RequirePackage[hidelinks]{hyperref}
@@ -80,19 +85,27 @@
 
 % Specify the dimensions of each page
 
-\oddsidemargin .25in    %   Note \oddsidemargin = \evensidemargin
-\evensidemargin .25in
-\marginparwidth 0.07 true in
-%\marginparwidth 0.75 true in
-%\topmargin 0 true pt           % Nominal distance from top of page to top of
-%\topmargin 0.125in
-\topmargin -0.5in
-\addtolength{\headsep}{0.25in}
-\textheight 8.5 true in       % Height of text (including footnotes & figures)
-\textwidth 6.0 true in        % Width of text line.
-\widowpenalty=10000
-\clubpenalty=10000
-\@twosidetrue \@mparswitchtrue \def\ds@draft{\overfullrule 5pt}
+% \oddsidemargin .25in    %   Note \oddsidemargin = \evensidemargin
+% \evensidemargin .25in
+% \marginparwidth 0.07 true in
+% %\marginparwidth 0.75 true in
+% %\topmargin 0 true pt           % Nominal distance from top of page to top of
+% %\topmargin 0.125in
+% \topmargin -0.5in
+% \addtolength{\headsep}{0.25in}
+% \textheight 8.5 true in       % Height of text (including footnotes & figures)
+% \textwidth 6.0 true in        % Width of text line.
+% \widowpenalty=10000
+% \clubpenalty=10000
+% \@twosidetrue \@mparswitchtrue \def\ds@draft{\overfullrule 5pt}
+\RequirePackage[paper=letterpaper,
+                top=10mm,
+                left=10mm,
+                bottom=10mm,
+                right=10mm,
+                includeheadfoot,
+                % showframe
+                ]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               S E C T I O N S
@@ -151,11 +164,11 @@
 \def\thesection {\arabic{section}}
 \def\thesubsection {\thesection.\arabic{subsection}}
 \def\section{\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}
-             {\large\bf\raggedright}}
+             {\color{melba}\large\bf\raggedright}}
 \def\subsection{\@startsection{subsection}{2}{\z@}{-0.20in}{0.08in}
-                {\normalsize\bf\raggedright}}
+                {\color{melba}\normalsize\bf\raggedright}}
 \def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-0.18in}{0.08in}
-                {\normalsize\sc\raggedright}}
+                {\color{melba}\normalsize\sc\raggedright}}
 \def\paragraph{\@startsiction{paragraph}{4}{\z@}{1.5ex plus
   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
 \def\subparagraph{\@startsiction{subparagraph}{5}{\z@}{1.5ex plus
@@ -179,19 +192,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% use \begin{abstract} .. \end{abstract} for abstracts.
-\renewenvironment{abstract}
-{\centerline{\large\bf Abstract}\vspace{0.7ex}%
-  \bgroup\leftskip 20pt\rightskip 20pt\small\noindent\ignorespaces}%
-{\par\egroup\vskip 0.25ex}
+% \renewenvironment{abstract}
+% {\centerline{\large\bf Abstract}\vspace{0.7ex}%
+%   \bgroup\leftskip 20pt\rightskip 20pt\small\noindent\ignorespaces}%
+% {\par\egroup\vskip 0.25ex}
+\def\abstract#1{\gdef\@abstract{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               KEYWORDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% use \begin{keywords} .. \end{keywords} for keywordss.
-\newenvironment{keywords}
-{\vskip 5pt \bgroup \leftskip 20pt \rightskip 20pt \topskip 10pt \small\noindent{\bf Keywords:} }%
-{\par\egroup\vskip 0.25ex}
+% \newenvironment{keywords}
+% {\vskip 5pt \bgroup \leftskip 20pt \rightskip 20pt \topskip 10pt \small\noindent{\bf Keywords:} }%
+% {\par\egroup\vskip 0.25ex}
+\def\keywords#1{\gdef\@keywords{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                        FIRST PAGE, TITLE, AUTHOR
@@ -240,19 +255,47 @@
 \def\@endauthor{}
 \def\@starteditor{\noindent \small {\bf Editor:~}}
 \def\@endeditor{\normalsize}
+% \def\@maketitle{}
 \def\@maketitle{\vbox{\hsize\textwidth
  \linewidth\hsize \vskip \beforetitskip
- {\begin{center} \Large\bf \@title \par \end{center}} \vskip \aftertitskip
+ {\parbox[c]{.3\textwidth}{\includegraphics[width=.3\textwidth]{logo.png}}%
+  \hfill%
+  \parbox[c]{.68\textwidth}{\LARGE Machine Learning\\for Biomedical Imaging}}
+  {\color{melba}\rule{\textwidth}{3pt}}
+ {\LARGE\bf \@title \par}
+ {\hfill \footnotesize\url{\@doi}}
+ \vskip
+  {\color{melba}\rule{\textwidth}{1pt}}
  {\def\and{\unskip\enspace{\rm and}\enspace}%
   \def\addr{\scriptsize}%
   \def\email{\rm\hfill\scriptsize}%
-  \def\name{\normalsize}%
+  \def\name{\rm\normalsize}%
   \def\firstname{\normalsize}%
   \def\surname{\sc\normalsize}%
   \def\AND{\@endauthor\rm\hss \vskip \interauthorskip \@startauthor}%
   \@startauthor \@author \@endauthor\rm\hss \vskip \interauthorskip  }
 
   \vskip \aftermaketitskip
+
+  {\color{melba}\bf Abstract}
+
+  \@abstract
+
+
+  % {\resizebox{\textwidth}{!}{\begin{tabular}{p{.2\textwidth}p{.75\textwidth}}
+  %   \hline
+  %   {\color{melba}\bf Article informations} & {\color{melba}\bf Abstract} \\
+  %    & \\
+  %   \multirow{3}{.2\textwidth}{\footnotesize Submitted: \@datesubmitted\\
+  %   Published: \@datepublished\\
+  %   \url{\@doi}\\
+  %   \@melbaid~~vol.~\@volume\\
+  %   pp.~\@firstpageno--\pageref{LastPage}}
+  %    & {\footnotesize\@abstract} \\
+  %     & \hrule \\
+  %   \multirow{1}{.2\textwidth}{\href{\@doi}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal.eps}}} & {\small \textcolor{melba}{\textbf{Keywords:}} \@keywords} \\
+  %    \hline
+  % \end{tabular}}}
   
   %\noindent \@starteditor \@editors \@endeditor
   \vskip \aftermaketitskip
@@ -261,7 +304,7 @@
 %\def\editor#1{\gdef\@editor{#1}}
 %\def\editors#1{\gdef\@editors{#1}}
 
-\def\orcid#1{\textsuperscript{~\tiny\url{https://orcid.org/#1}}}
+\def\orcid#1{\color{black}\textsuperscript{\href{https://orcid.org/#1}{\includegraphics[width=1em]{orcid.png}}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -296,11 +339,13 @@
 \if@accepted
   \fancypagestyle{titlepage}{%
     \fancyhf{}
-    \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging~~\@melbaid~~vol.~\@volume,~pp.~\@firstpageno--\pageref{LastPage}\\%
-    \@melbaspecialissue~\\%
-    \@melbaspecialissueeditors}
-    \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
-    ~}
+    % \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging~~\@melbaid~~vol.~\@volume,~pp.~\@firstpageno--\pageref{LastPage}\\%
+    % \@melbaspecialissue~\\%
+    % \@melbaspecialissueeditors}
+    % \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
+    % ~}
+    \lhead{}
+    \rhead{}
     \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{\@doi}}
     \renewcommand{\headrulewidth}{0pt}
   }
@@ -319,11 +364,22 @@
 %%        \ShortHeadings{short title}{short authors}
 
 \def\ShortHeadings#1#2{\def\ps@melbaps{\let\@mkboth\@gobbletwo%
-\def\@oddhead{\hfill {\small\sc #1} \hfill}%
-\def\@oddfoot{\hfill \small\rm \thepage \hfill}%
-\def\@evenhead{\hfill {\small\sc #2} \hfill}%
-\def\@evenfoot{\hfill \small\rm \thepage \hfill}}%
+% \def\@oddhead{\hfill {\small\sc #1} \hfill}%
+\def\@oddhead{\small\hfill#1\hfill\textcolor{BrickRed}{\thepage}}%
+\def\@oddfoot{\hfill}%
+% \def\@evenhead{\hfill {\small\sc #2} \hfill}%
+\def\@evenhead{\small\textcolor{BrickRed}{\thepage}\hfill#2\hfill}%
+\def\@evenfoot{\hfill}}%
 \pagestyle{melbaps}}
+
+
+\renewcommand{\@evenhead}{%
+    \small\textcolor{BrickRed}{\thepage}~~|~~\leftmark\hfill%
+}
+\renewcommand{\@oddhead}{%
+    \small\hfil\rightmark~~|~~\textcolor{BrickRed}{\thepage}%
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,11 +1,11 @@
-\documentclass[twoside,11pt]{article}
+\documentclass[twoside,twocolumn,11pt]{article}
 
 % melba package. use options:
 % - 'arxiv' in arXiv pre-print in submission (disable line numbers)
 % - 'accepted' for MELBA _accepted_ papers **only**;
 % - 'specialissue' for MELBA accepted papers that are part of a special issue.
 %                  to be used in conjunction with 'accepted'
-\usepackage{melba}
+\usepackage[accepted]{melba}
 
 \usepackage{mwe} % to get dummy images, only for the example
 % Can be removed for actual manuscripts
@@ -55,42 +55,53 @@
 % Title
 % If the title spans several lines, authors could decide where the title should be split using \\
 % This will cause a warning from the hyperref package, when it sets the title as pdf 'title' metadata
-\title{An Inspiring Title \\ for the MELBA Journal Sample Article}
+\title{An Inspiring Title for the MELBA Journal Sample Article}
 
 % For very long author lists, please contact the publishing editor for instructions publishing-editor@melba-journal.org (this is usually dealt on a case-by-case basis).
 % \firstname and \surname are optionnal, (simply using \name is doable), but can be useful
 % to clarify names such as \firstname FIRSTNAME MIDDLE NAME \surname FAMILYNAME or composed names
-\author{\firstname Adrian V. \surname Dalca \email adalca@mit.edu \\  % start right after \author{, or there will be an extra space
+\author{\firstname Adrian V. \surname Dalca \\  % start right after \author{, or there will be an extra space
 	\addr EECS, Massachusetts Institute of Technology, Cambridge, MA, USA
 	\AND
-	\name Mert R. Sabuncu\orcid{0000-1111-2222-3333} \email msabuncu@cornell.edu \\
+	\name Mert R. Sabuncu\orcid{0000-1111-2222-3333} \\
 	\addr School of Electrical and Computer Engineering, Cornell University, Ithaca, NY, USA
 }
 
 
 
+
+\renewcommand{\familydefault}{\sfdefault}
+% \usepackage{fontspec}
+
+% \newfontfamily\EBInitF{EBGaramond-InitialsF1.otf}
+% \newfontfamily\EBInitFF{EBGaramond-InitialsF2.otf}
+\usepackage{lettrine}
+% \newcommand{\enluminure}[2]{\lettrine[lines=4,lhang=0.1,findent=0.5em,nindent=0em]{\large \initfamily \textcolor{black}{#1}}{\bfseries\textcolor{black}{#2}}}
+\newcommand{\enluminure}[2]{\lettrine[lines=3]{%
+\textcolor{melba}{#1}}{\bfseries\textcolor{black}{#2}}}
+
+% \usepackage[full]{textcomp}
+% \usepackage[swashQ,osf]{garamondx} % Actual project font
+
+\abstract{%   <- trailing '%' for backward compatibility of .sty file
+	We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive.
+	%
+	Our code is available at~\url{http://yoururl.com}.}
+
+
+\keywords{Machine Learning, Image Registration}
+
 % Indendation is not mandatory, but usually makes the code more readable
 \begin{document}
 
 % top matter
-\maketitle
+\twocolumn[\maketitle]
 
-% abstract
-\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
-	We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive.
-	%
-	Our code is available at~\url{http://yoururl.com}.
-\end{abstract}
-
-% keywords
-\begin{keywords}
-	Machine Learning, Image Registration
-\end{keywords}
-
+\vspace{1em}
 
 % Introduction (or first section)
 \section{Introduction}
-	A deformable template is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals.
+	\enluminure{A} deformable template is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
