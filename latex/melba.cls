@@ -41,9 +41,10 @@
 \fi
 
 
+\RequirePackage{lmodern}
 \renewcommand{\familydefault}{\sfdefault}
 \RequirePackage{lettrine}
-\newcommand{\enluminure}[2]{\lettrine[lines=3]{\textcolor{melba}{#1}}{\bfseries\textcolor{black}{#2}}}
+\newcommand{\enluminure}[2]{\lettrine[lines=3, findent=0.5em, nindent=0em]{\textcolor{melba}{#1}}{\bf#2}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             REQUIRED PACKAGES
