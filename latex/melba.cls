@@ -358,7 +358,6 @@
     \rhead{}
     \renewcommand{\headrule}{}
     \cfoot{\small\thepage}
-    \setlength{\headheight}{0pt}
   }
 \else
   \fancypagestyle{titlepage}{%
