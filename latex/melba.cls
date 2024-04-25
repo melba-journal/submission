@@ -274,7 +274,7 @@
   \fi
   {\color{melba}\rule{\textwidth}{5pt}}
  {\LARGE\bf \@title \par}
- {\hfill \footnotesize\url{\@doi}}
+ {\hfill \if@accepted\footnotesize\url{\@doi}\fi}
   {\color{melba}\rule{\textwidth}{1pt}}
  {\def\aff{\reset@font\scriptsize\textsuperscript}%
   \def\name{\reset@font\normalsize}%
@@ -305,7 +305,7 @@
 
   {\scriptsize%
     Received: \@datesubmitted, Published \@datepublished\\
-    \@melbaspecialissue, \@melbaspecialissueeditors
+    \if@specialissue\@melbaspecialissue, \@melbaspecialissueeditors\fi
   }
 
 
