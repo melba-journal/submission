@@ -367,22 +367,20 @@
     \rhead{\scriptsize In submission\\~\\
     ~}
     \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\~}
-    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\headrule}{}
   }
 \fi
 
 %% Defines the pagestyle for the rest of the pages
 %% Usage: \ShortHeadings{Minimizing Conflicts}{Minton et al}
 %%        \ShortHeadings{short title}{short authors}
-
-\def\ShortHeadings#1#2{\def\ps@melbaps{\let\@mkboth\@gobbletwo%
-% \def\@oddhead{\hfill {\small\sc #1} \hfill}%
-\def\@oddhead{\small\hfill#1\hfill\textcolor{BrickRed}{\thepage}}%
-\def\@oddfoot{\hfill}%
-% \def\@evenhead{\hfill {\small\sc #2} \hfill}%
-\def\@evenhead{\small\textcolor{BrickRed}{\thepage}\hfill#2\hfill}%
-\def\@evenfoot{\hfill}}%
-\pagestyle{melbaps}}
+\def\ShortHeadings#1#2{%
+\pagestyle{fancy}%
+\renewcommand{\headrule}{\color{melba}\rule{\textwidth}{1.5pt}}%
+\fancyhead{}%
+\fancyhead[CO]{\small#1}%
+\fancyhead[CE]{\small#2, \@melbayear}%
+}
 
 
 \renewcommand{\@evenhead}{%
