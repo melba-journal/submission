@@ -45,14 +45,16 @@
 % This will cause a warning from the hyperref package, when it sets the title as pdf 'title' metadata
 \title{An Inspiring Title for the MELBA Journal Sample Article}
 
-% For very long author lists, please contact the publishing editor for instructions publishing-editor@melba-journal.org (this is usually dealt on a case-by-case basis).
 % \firstname and \surname are optionnal, (simply using \name is doable), but can be useful
 % to clarify names such as \firstname FIRSTNAME MIDDLE NAME \surname FAMILYNAME or composed names
-\author{\firstname Adrian V. \surname Dalca \\  % start right after \author{, or there will be an extra space
-	\addr EECS, Massachusetts Institute of Technology, Cambridge, MA, USA
-	\AND
-	\name Mert R. Sabuncu\orcid{0000-1111-2222-3333} \\
-	\addr School of Electrical and Computer Engineering, Cornell University, Ithaca, NY, USA
+\author{
+	\firstname Adrian V. \surname Dalca \aff{1,3},
+	\name Mert R. Sabuncu\orcid{0000-0002-7068-719X} \aff{2,3}
+}
+\affiliations{
+	\num 1 \addr EECS, Massachusetts Institute of Technology, Cambridge, MA, USA \\
+	\num 2 \addr School of Electrical and Computer Engineering, Cornell University, Ithaca, NY, USA \\
+	\num 3 \addr Melba journal, The Internet, CERN, CH
 }
 
 

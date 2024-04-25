@@ -255,8 +255,9 @@
  \let\maketitle\relax \let\@maketitle\relax
  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
 
-\def\@startauthor{\noindent \normalsize}
-\def\@endauthor{}
+% \def\@startauthor{\noindent \normalsize}
+% \def\@endauthor{}
+\def\affiliations#1{\gdef\@affiliations{#1}}
 \def\@starteditor{\noindent \small {\bf Editor:~}}
 \def\@endeditor{\normalsize}
 % \def\@maketitle{}
@@ -269,14 +270,17 @@
  {\LARGE\bf \@title \par}
  {\hfill \footnotesize\url{\@doi}}
   {\color{melba}\rule{\textwidth}{1pt}}
- {\def\and{\unskip\enspace{\rm and}\enspace}%
-  \def\addr{\scriptsize}%
-  \def\email{\rm\hfill\scriptsize}%
-  \def\name{\rm\normalsize}%
-  \def\firstname{\normalsize}%
-  \def\surname{\sc\normalsize}%
-  \def\AND{\@endauthor\rm\hss \vskip \interauthorskip \@startauthor}%
-  \@startauthor \@author \@endauthor\rm\hss \vskip \interauthorskip  }
+ {\def\aff{\reset@font\scriptsize\textsuperscript}%
+  \def\name{\reset@font\normalsize}%
+  \def\firstname{\reset@font\normalsize}%
+  \def\surname{\reset@font\bf\normalsize}%
+   \@author  \reset@font\normalsize}
+
+ \vspace{1em}
+
+ {\def\num{\bf}%
+  \def\addr{\reset@font}
+   \@affiliations \reset@font\normalsize}
 
   \vskip \aftermaketitskip
 
