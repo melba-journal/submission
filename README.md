@@ -1,5 +1,7 @@
 # MELBA submission
 
+**This is the v2 of the template, still in developement. For now, it is only meant for submission.** Notably, the `melba.sty` has been changed to `melba.cls` and the authors and affiliations macros have been remade. The rest has not changed much. Figures placement, and width, might need to be reworked slightly.
+
 This repository is used as a ressource for authors wishing to submit to the [Melba journal](https://www.melba-journal.org). The repository is structured as follow:
 * [Cover letter](#cover-letter)
 * [Latex formatting instructions](#latex-formatting-instructions)
