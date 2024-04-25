@@ -1,13 +1,10 @@
 diff --git a/latex/melba-sample.tex b/latex/melba-sample.tex
-index 227168e..094d6bf 100644
+index fa52f39..7506480 100644
 --- a/latex/melba-sample.tex
 +++ b/latex/melba-sample.tex
-@@ -4,7 +4,7 @@
+@@ -1,4 +1,4 @@
+-\documentclass{melba}
++\documentclass[accepted]{melba}
+ % melba class has several options:
  % - 'arxiv' in arXiv pre-print in submission (disable line numbers)
  % - 'accepted' for MELBA _accepted_ papers **only**;
- % - 'specialissue' for MELBA accepted papers that are part of a special issue.
--\usepackage{melba}
-+\usepackage[accepted]{melba}
- 
- \usepackage{mwe} % to get dummy images, only for the example
- % Can be removed for actual manuscripts

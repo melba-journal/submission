@@ -3,8 +3,10 @@ melba-sample.pdf
 
 latex/.tools/*.pdf
 latex/.tools/*.tex
-latex/.tools/melba.sty
+latex/.tools/melba.cls
 latex/.tools/sample.bib
+latex/.tools/logo.png
+latex/.tools/orcid.png
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

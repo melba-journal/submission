@@ -1,4 +1,4 @@
-% v2.xx -- 2024/04/XX
+% v2.01 -- 2024/04/25
 % For any question, please contact publishing-editor@melba-journal.org
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{melba}
@@ -8,7 +8,7 @@
 % This style file was based on the JLMR style file.
 \RequirePackage{amsmath}
 \RequirePackage[switch]{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' v2.xx -- 2023.}
+\typeout{Document Style `melba-jmlr' v2.01 -- 2024.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -306,7 +306,7 @@
 
   {\scriptsize%
     \if@accepted\url{\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\%
-    \if@accepted Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{\@doi}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal.eps}}}\\\fi
+    \if@accepted Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{\@doi}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal-eps-converted-to.pdf}}}\\\fi
     \if@specialissue\@melbaspecialissue\\%
     \@melbaspecialissueeditors\fi%
   }
