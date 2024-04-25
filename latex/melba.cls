@@ -267,10 +267,12 @@
 % \def\@maketitle{}
 \def\@maketitle{\vbox{\hsize\textwidth
  \linewidth\hsize \vskip \beforetitskip
- {\parbox[c]{.3\textwidth}{\includegraphics[width=.3\textwidth]{logo.png}}%
-  \hfill%
-  \parbox[c]{.68\textwidth}{\LARGE Machine Learning\\for Biomedical Imaging}}
-  {\color{melba}\rule{\textwidth}{3pt}}
+ \if@accepted
+   {\parbox[c]{.3\textwidth}{\includegraphics[width=.3\textwidth]{logo.png}}%
+    \hfill%
+    \parbox[c]{.68\textwidth}{\LARGE Machine Learning\\for Biomedical Imaging}}
+  \fi
+  {\color{melba}\rule{\textwidth}{5pt}}
  {\LARGE\bf \@title \par}
  {\hfill \footnotesize\url{\@doi}}
   {\color{melba}\rule{\textwidth}{1pt}}
