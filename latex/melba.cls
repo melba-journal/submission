@@ -429,19 +429,19 @@
 \def\belowstrut#1{\rule[-#1]{0in}{#1}\ignorespaces}
 
 % Acknowledgments
-\long\def\acks#1{\vskip 0.3in\noindent{\large\bf Acknowledgments}\vskip 0.2in
+\long\def\acks#1{\vskip 0.3in\noindent{\color{melba}\large\bf Acknowledgments}\vskip 0.2in
 	\noindent #1}
 
 % Ethics
-\long\def\ethics#1{\vskip 0.3in\noindent{\large\bf Ethical Standards}\vskip 0.2in
+\long\def\ethics#1{\vskip 0.3in\noindent{\color{melba}\large\bf Ethical Standards}\vskip 0.2in
 \noindent #1}
 
 % COI
-\long\def\coi#1{\vskip 0.3in\noindent{\large\bf Conflicts of Interest}\vskip 0.2in
+\long\def\coi#1{\vskip 0.3in\noindent{\color{melba}\large\bf Conflicts of Interest}\vskip 0.2in
 	\noindent #1}
 
 % Data availability
-\long\def\data#1{\vskip 0.3in\noindent{\large\bf Data availability}\vskip 0.2in
+\long\def\data#1{\vskip 0.3in\noindent{\color{melba}\large\bf Data availability}\vskip 0.2in
   \noindent #1}
 
 % Research Note
@@ -454,7 +454,7 @@
 \def\section{\@ifnextchar*{\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}%
              {\large\bf\raggedright}}%
 {\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}
-             {\large\bf\raggedright Appendix\ }}}}
+             {\color{melba}\large\bf\raggedright Appendix\ }}}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
