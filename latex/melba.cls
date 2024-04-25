@@ -1,9 +1,13 @@
-% v2.xx -- 2023/12/XX
+% v2.xx -- 2024/04/XX
 % For any question, please contact publishing-editor@melba-journal.org
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{melba}
+
+\LoadClass[twoside,twocolumn,11pt]{article}
 
 % This style file was based on the JLMR style file.
-\usepackage{amsmath}
-\usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
+\RequirePackage{amsmath}
+\RequirePackage{lineno} % for line numbers. TODO: make this opnly called in submission
 \typeout{Document Style `melba-jmlr' v2.xx -- 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
@@ -264,7 +268,6 @@
   {\color{melba}\rule{\textwidth}{3pt}}
  {\LARGE\bf \@title \par}
  {\hfill \footnotesize\url{\@doi}}
- \vskip
   {\color{melba}\rule{\textwidth}{1pt}}
  {\def\and{\unskip\enspace{\rm and}\enspace}%
   \def\addr{\scriptsize}%
