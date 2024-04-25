@@ -304,10 +304,9 @@
   {\color{melba}\bf Article informations}
 
   {\scriptsize%
-    \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\
-    \if@accepted\url{\@doi}\\\fi
+    \if@accepted\url{\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\
     Received: \@datesubmitted, Published \@datepublished\\
-    \if@specialissue\@melbaspecialissue, \@melbaspecialissueeditors\fi
+    \if@specialissue\@melbaspecialissue\\\@melbaspecialissueeditors\fi
   }
 
 
@@ -353,22 +352,19 @@
 \if@accepted
   \fancypagestyle{titlepage}{%
     \fancyhf{}
-    % \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging~~\@melbaid~~vol.~\@volume,~pp.~\@firstpageno--\pageref{LastPage}\\%
-    % \@melbaspecialissue~\\%
-    % \@melbaspecialissueeditors}
-    % \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
-    % ~}
+    \setlength{\headheight}{0pt}
     \lhead{}
     \rhead{}
-    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{\@doi}}
-    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\headrule}{}
+    \cfoot{\small\thepage}
+    \setlength{\headheight}{0pt}
   }
 \else
   \fancypagestyle{titlepage}{%
     \fancyhf{}
-    \rhead{\scriptsize In submission\\~\\
-    ~}
-    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\~}
+    \setlength{\headheight}{11pt}
+    \rhead{\scriptsize In submission}
+    \cfoot{\small\thepage}
     \renewcommand{\headrule}{}
   }
 \fi
@@ -382,15 +378,11 @@
 \fancyhead{}%
 \fancyhead[CO]{\small#1}%
 \fancyhead[CE]{\small#2, \@melbayear}%
+\fancyfoot{}
+\fancyfoot[CO]{\hfill\small\thepage}
+\fancyfoot[CE]{\small\thepage\hfill}
 }
 
-
-\renewcommand{\@evenhead}{%
-    \small\textcolor{BrickRed}{\thepage}~~|~~\leftmark\hfill%
-}
-\renewcommand{\@oddhead}{%
-    \small\hfil\rightmark~~|~~\textcolor{BrickRed}{\thepage}%
-}
 
 
 
