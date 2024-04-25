@@ -288,11 +288,27 @@
   \def\addr{\reset@font}
    \@affiliations \reset@font\normalsize}
 
-  \vskip \aftermaketitskip
+  % \vskip \aftermaketitskip
 
+ \vspace{1em}
   {\color{melba}\bf Abstract}
 
   \@abstract
+
+ \vspace{1em}
+  {\color{melba}\bf Keywords}
+
+  \@keywords
+
+ \vspace{1em}
+  {\color{melba}\bf Article informations}
+
+  {\scriptsize%
+    Received: \@datesubmitted, Published \@datepublished\\
+    \@melbaspecialissue, \@melbaspecialissueeditors
+  }
+
+
 
   \vskip \aftermaketitskip
 }}
