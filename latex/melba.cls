@@ -7,7 +7,7 @@
 
 % This style file was based on the JLMR style file.
 \RequirePackage{amsmath}
-\RequirePackage{lineno} % for line numbers. TODO: make this opnly called in submission
+\RequirePackage[switch]{lineno} % for line numbers. TODO: make this opnly called in submission
 \typeout{Document Style `melba-jmlr' v2.xx -- 2023.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
