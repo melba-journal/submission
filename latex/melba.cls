@@ -305,9 +305,10 @@
   {\color{melba}\bf Article informations}
 
   {\scriptsize%
-    \if@accepted\url{\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\
-    Received: \@datesubmitted, Published \@datepublished\\
-    \if@specialissue\@melbaspecialissue\\\@melbaspecialissueeditors\fi
+    \if@accepted\url{\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\%
+    \if@accepted Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{\@doi}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal.eps}}}\\\fi
+    \if@specialissue\@melbaspecialissue\\%
+    \@melbaspecialissueeditors\fi%
   }
 
 
