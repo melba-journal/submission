@@ -41,6 +41,10 @@
 \fi
 
 
+\renewcommand{\familydefault}{\sfdefault}
+\RequirePackage{lettrine}
+\newcommand{\enluminure}[2]{\lettrine[lines=3]{\textcolor{melba}{#1}}{\bfseries\textcolor{black}{#2}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             REQUIRED PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,9 +174,9 @@
 \def\section{\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}
              {\color{melba}\large\bf\raggedright}}
 \def\subsection{\@startsection{subsection}{2}{\z@}{-0.20in}{0.08in}
-                {\color{melba}\normalsize\bf\raggedright}}
+                {\color{melba}\normalsize\raggedright}}
 \def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-0.18in}{0.08in}
-                {\color{melba}\normalsize\sc\raggedright}}
+                {\color{melba}\normalsize\it\raggedright}}
 \def\paragraph{\@startsiction{paragraph}{4}{\z@}{1.5ex plus
   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
 \def\subparagraph{\@startsiction{subparagraph}{5}{\z@}{1.5ex plus
@@ -288,23 +292,6 @@
 
   \@abstract
 
-
-  % {\resizebox{\textwidth}{!}{\begin{tabular}{p{.2\textwidth}p{.75\textwidth}}
-  %   \hline
-  %   {\color{melba}\bf Article informations} & {\color{melba}\bf Abstract} \\
-  %    & \\
-  %   \multirow{3}{.2\textwidth}{\footnotesize Submitted: \@datesubmitted\\
-  %   Published: \@datepublished\\
-  %   \url{\@doi}\\
-  %   \@melbaid~~vol.~\@volume\\
-  %   pp.~\@firstpageno--\pageref{LastPage}}
-  %    & {\footnotesize\@abstract} \\
-  %     & \hrule \\
-  %   \multirow{1}{.2\textwidth}{\href{\@doi}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal.eps}}} & {\small \textcolor{melba}{\textbf{Keywords:}} \@keywords} \\
-  %    \hline
-  % \end{tabular}}}
-  
-  %\noindent \@starteditor \@editors \@endeditor
   \vskip \aftermaketitskip
 }}
 
