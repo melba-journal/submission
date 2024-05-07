@@ -2,7 +2,7 @@
 
 **This is the v2 of the template, still in developement. For now, it is only meant for submission.** Notably, the `melba.sty` has been changed to `melba.cls` and the authors and affiliations macros have been remade. The rest has not changed much. Figures placement, and width, might need to be reworked slightly.
 
-This repository is used as a ressource for authors wishing to submit to the [Melba journal](https://www.melba-journal.org). The repository is structured as follow:
+This repository is used as a ressource for authors wishing to submit to the [MELBA journal](https://www.melba-journal.org). The repository is structured as follow:
 * [Cover letter](#cover-letter)
 * [Latex formatting instructions](#latex-formatting-instructions)
     * [Submission](#submission)
@@ -14,7 +14,7 @@ This repository is used as a ressource for authors wishing to submit to the [Mel
 Thank you for submitting to MELBA!
 
 ## Cover letter
-Any new submission to Melba should be accompanied by a cover letter. Authors can use the following template as a starting point:
+Any new submission to MELBA should be accompanied by a cover letter. Authors can use the following template as a starting point:
 
 **`[PLEASE FOLLOW INSTRUCTIONS IN SQUARE BRACKETS. BEFORE SUBMISSION, ERASE ALL INSTRUCTIONS.]`**
 
@@ -80,13 +80,13 @@ At every step below where we ask for communication or delivery of a file, please
 1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor;
 1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper;
 1. upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page;
-1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [Melba website](https://www.melba-journal.1org);
+1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [MELBA website](https://www.melba-journal.1org);
 1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website.
 
 
-Nowadays, Melba publishes directly the papers (as opposed to initially being an arXiv-overlay), but it is still preferred that authors also upload their papers in arXiv (and other archive repository when relevant, e.g. HAL).
+Nowadays, MELBA publishes directly the papers (as opposed to initially being an arXiv-overlay), but it is still preferred that authors also upload their papers in arXiv (and other archive repository when relevant, e.g. HAL).
 **When submitting to arXiv, if a pre-print already exists, please update it instead of creating a new arXiv submission.**
-Please pay attention to the following fields (`YYYY:NNN` is the Melba paper ID that has been communicated earlier by the publishing editor):
+Please pay attention to the following fields (`YYYY:NNN` is the MELBA paper ID that has been communicated earlier by the publishing editor):
 
 | Field | Value  |
 |-------|--------|
@@ -98,7 +98,7 @@ Please pay attention to the following fields (`YYYY:NNN` is the Melba paper ID t
 
 
 <!-- 1. the license should be `CC-BY 4.0`;
-1. the arXiv Comments field **must** say "*Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org/papers/YYYY:NNN.html*". `YYYY:NNN` is the melba paper ID that has been communicated earlier by the publishing editor;
+1. the arXiv Comments field **must** say "*Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://www.melba-journal.org/papers/YYYY:NNN.html*". `YYYY:NNN` is the MELBA paper ID that has been communicated earlier by the publishing editor;
 1. moreover, the `journal-ref` field should contain `Machine.Learning.for.Biomedical.Imaging. 1 (2022)`; -->
 1. Let us know of the final arXiv preprint ID (e.g. 1809.05231) and version (e.g. v3);
 1. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
@@ -109,7 +109,7 @@ The following special issues are currently open for submissions:
 * **[special issue on image registration](https://melba-journal.org/blog/012-special-issue-image-registration.html)** Deadline 2023/09/01
 
 
-Melba has currently the following published special issues:
+MELBA has currently the following published special issues:
 * **Medical Imaging with Deep Learning (MIDL) 2020**
 *Guest Editors:* Marleen de Bruijne, Tal Arbel, Ismail Ben Ayed, Hervé Lombaert
 * **Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2020**
@@ -128,3 +128,5 @@ Melba has currently the following published special issues:
 *Guest Editors:* Jana Hutter, Roxane Licandro, Andrew Melbourne, Esra Abaci Turk, Daphna Link-Sourani, Christopher Macgowan
 * **Special Issue for Generative Models**
 *Guest Editors:*  Mert Sabuncu, Sotirios A. Tsaftaris
+* **Special Issue on Image Registration**
+*Guest Editors:*  Veronika Zimmer, Alessa Hering, Mattias Heinrich
