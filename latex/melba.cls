@@ -60,7 +60,7 @@
 \RequirePackage{multirow}
 % \RequirePackage{ebgaramond}
 
-\definecolor{melba}{HTML}{4a89a3}
+
 
 \if@usehyper
 \RequirePackage[hidelinks]{hyperref}
@@ -480,7 +480,9 @@
 % Messy yet redable LaTeX if/elses:
 \if@accepted
   \newcommand{\revision}[1]{#1}
+  \definecolor{melba}{HTML}{4a89a3}
 \else
+  \definecolor{melba}{HTML}{000000}
   \if@arxiv
     \newcommand{\revision}[1]{#1}
   \else
