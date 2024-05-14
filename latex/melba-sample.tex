@@ -55,7 +55,7 @@
 	\name Firstname2 Name2\aff{2,3}\orcid{0000-1111-2222-3333}
 }
 % Authors are free to use either a new line (\\) or a simple comma (,) between affiliations.
-\affiliations{
+\affiliations{% <- trailing '%' to avoid unwanted indent
 	\num 1 \addr Melba journal, The Internet, CERN, CH \\
 	\num 2 \addr Melba journal, The Internet, CERN, CH \\
 	\num 3 \addr Melba journal, The Internet, CERN, CH
@@ -74,6 +74,10 @@
 
 % top matter
 \twocolumn[\maketitle]
+% comment the preceedings and uncomment the following if the authors list + abstract is longer than one page
+% \maketitle
+% \twocolumn
+
 
 % Introduction (or first section)
 % \rule{\textwidth}{1pt}

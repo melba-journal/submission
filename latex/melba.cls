@@ -3,7 +3,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{melba}
 
-\LoadClass[twoside,twocolumn,11pt]{article}
+\LoadClass[twoside,11pt]{article}
 
 % This style file was based on the JLMR style file.
 \RequirePackage{amsmath}
@@ -266,27 +266,26 @@
 \def\@starteditor{\noindent \small {\bf Editor:~}}
 \def\@endeditor{\normalsize}
 % \def\@maketitle{}
-\def\@maketitle{\vbox{\hsize\textwidth
+\def\@maketitle{\hsize\textwidth
  \linewidth\hsize \vskip \beforetitskip
  \if@accepted
    {\parbox[c]{.3\textwidth}{\includegraphics[width=.3\textwidth]{logo.png}}%
     \hfill%
     \parbox[c]{.68\textwidth}{\LARGE Machine Learning\\for Biomedical Imaging}}
   \fi
-  {\color{melba}\rule{\textwidth}{5pt}}
- {\LARGE\bf \@title \par}
- {\hfill \if@accepted\footnotesize\url{\@doi}\fi}
-  {\color{melba}\rule{\textwidth}{1pt}}
- {\def\aff{\reset@font\scriptsize\textsuperscript}%
+  {\noindent\color{melba}\rule{\textwidth}{5pt}}
+ {\LARGE\bf \@title \par}%
+  {\noindent\color{melba}\rule{\textwidth}{1pt}}
+ {\def\aff{~\reset@font\scriptsize\textsuperscript}%
   \def\name{\reset@font\normalsize}%
   \def\firstname{\reset@font\normalsize}%
   \def\surname{\reset@font\bf\normalsize}%
    \@author  \reset@font\normalsize}
 
- \vspace{1em}
-
- {\def\num{\bf}%
-  \def\addr{\reset@font}
+ \vspace{1em}%
+%
+ \noindent{\def\num{\bf}%
+  \def\addr{\reset@font}%
    \@affiliations \reset@font\normalsize}
 
   % \vskip \aftermaketitskip
@@ -314,7 +313,7 @@
 
 
   \vskip \aftermaketitskip
-}}
+}
 
 %\def\editor#1{\gdef\@editor{#1}}
 %\def\editors#1{\gdef\@editors{#1}}
