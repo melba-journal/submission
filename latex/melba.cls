@@ -364,7 +364,7 @@
   \fancypagestyle{titlepage}{%
     \fancyhf{}
     \setlength{\headheight}{11pt}
-    \rhead{\scriptsize In submission}
+    \rhead{}
     \cfoot{\small\thepage}
     \renewcommand{\headrule}{}
   }
