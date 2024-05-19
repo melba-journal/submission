@@ -130,3 +130,5 @@ MELBA has currently the following published special issues:
 *Guest Editors:*  Mert Sabuncu, Sotirios A. Tsaftaris
 * **Special Issue on Image Registration**
 *Guest Editors:*  Veronika Zimmer, Alessa Hering, Mattias Heinrich
+* **MICCAI 2023 LNQ challenge special issue**
+*Guest Editors:*  Steve Pieper, Erik Ziegler, Tawa Idris, Bhanusupriya Somarouthu, Reuben Dorent, Gordon Harris, Ron Kikinis
