@@ -423,6 +423,11 @@
    \fi}
 
 
+\RequirePackage{enumitem}
+\setlist[itemize]{leftmargin=1em}
+\setlist[enumerate]{leftmargin=1em}
+
+
 % Define strut macros for skipping spaces above and below text in a
 % tabular environment.
 \def\abovestrut#1{\rule[0in]{0in}{#1}\ignorespaces}
