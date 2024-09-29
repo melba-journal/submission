@@ -132,4 +132,5 @@ MELBA has currently the following published special issues:
 *Guest Editors:*  Veronika Zimmer, Alessa Hering, Mattias Heinrich
 * **MICCAI 2023 LNQ challenge special issue**
 *Guest Editors:*  Steve Pieper, Erik Ziegler, Tawa Idris, Bhanusupriya Somarouthu, Reuben Dorent, Gordon Harris, Ron Kikinis
-* **Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2023** *Guest Editors* Christian Baumgartner, Adrian Dalca, Raghav Mehta, Chen Qin, Carole Sudre, William (Sandy) Wells
+* **Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2023** *Guest Editors:* Christian Baumgartner, Adrian Dalca, Raghav Mehta, Chen Qin, Carole Sudre, William (Sandy) Wells
+* **Interpretability of Machine Intelligence in Medical Image Computing (iMIMIC) 2023** *Guest editors:* Mauricio Reyes, Jaime Cardoso, Jayashree Kalpathy-Cramer, Nguyen Le Minh, Pedro Abreu, José Amorim, Wilson Silva, Mara Graziani, Amith Kamath
