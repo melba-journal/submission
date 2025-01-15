@@ -33,7 +33,6 @@
 \ProcessOptions\relax
 
 \if@accepted
-  \PackageError{melba}{This package is still in development and should not be used for accepted papers yet.}{}{}
 \else
   \if@arxiv
   \else % not accepted nor arxiv
