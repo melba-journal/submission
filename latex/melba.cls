@@ -319,7 +319,7 @@
 %\def\editor#1{\gdef\@editor{#1}}
 %\def\editors#1{\gdef\@editors{#1}}
 
-\def\orcid#1{\color{black}\textsuperscript{\href{https://orcid.org/#1}{\includegraphics[width=1em]{orcid.png}}}}
+\def\orcid#1{\href{https://orcid.org/#1}{\includegraphics[width=.8em]{orcid.png}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
