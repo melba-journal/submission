@@ -1,8 +1,5 @@
 # MELBA submission
 
-**IMPORTANT NOTE: NEW SUBMISSIONS SHOULD USE OUR NEW TEMPLATE, ON BRANCH [V2](https://github.com/melba-journal/submission/tree/v2)**
-
-**For recently accepted papers, unless stated otherwise, _do not_ use the V2 template.**
 
 This repository is used as a ressource for authors wishing to submit to the [MELBA journal](https://www.melba-journal.org). The repository is structured as follow:
 * [Cover letter](#cover-letter)

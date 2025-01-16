@@ -1,24 +1,13 @@
-\documentclass[twoside,11pt]{article}
-
-% melba package. use options:
+\documentclass{melba}
+% melba class has several options:
 % - 'arxiv' in arXiv pre-print in submission (disable line numbers)
 % - 'accepted' for MELBA _accepted_ papers **only**;
+%                  to be used in conjunction with 'accepted'
 % - 'specialissue' for MELBA accepted papers that are part of a special issue.
 %                  to be used in conjunction with 'accepted'
-\usepackage{melba}
 
 \usepackage{mwe} % to get dummy images, only for the example
 % Can be removed for actual manuscripts
-
-
-% Any additional packages needed should be included after jmlr2e.
-% Note that jmlr2e.sty includes epsfig, amssymb, natbib and graphicx,
-% and defines many common macros, such as 'proof' and 'example'.
-%
-% It also sets the bibliographystyle to plainnat; for more information on
-% natbib citation styles, see the natbib documentation, a copy of which
-% is archived at http://www.jmlr.org/format/natbib.pdf
-
 
 % often used packages
 \usepackage{amsmath,amsfonts}
@@ -33,13 +22,13 @@
 
 % Header and footer (will be filled at publication)
 \melbaid{YYYY:NNN}  % This is provided upon by the publishing editor
-\doi{https://doi.org/10.59275/j.melba.2023-AAAA}
-\melbaauthors{Dalca and Sabuncu}  % Note: this one is also used to set the pdf 'authors' metadata
+\doi{10.59275/j.melba.2024-AAAA}
+\melbaauthors{Name1 and Name2}  % Note: this one is also used to set the pdf 'authors' metadata
 \volume{2}
 \firstpageno{1337}  % Communicated by the publishing editor
 \melbayear{YYYY}  % The publication year
-\datesubmitted{m1/yyyy}  % Date submitted to MELBA: mm/yyyy
-\datepublished{m2/yyyy}  % Today's date: mm/yyyy
+\datesubmitted{yyyy-m1-d1}  % Date submitted to MELBA: mm/yyyy
+\datepublished{yyyy-m2-d2}  % Today's date: mm/yyyy
 
 % The following is optionnal, only if you are publishing in a special issue
 % The information is available on the README.md of this repository
@@ -49,48 +38,51 @@
 
 
 % Short headings should be {running head} and {authors last names}
-\ShortHeadings{Autoencoder for Shapes of Brain Structures}{Dalca and Sabuncu}
+\ShortHeadings{MELBA Journal Sample Article}{Name1 and Name2}
 
 
 % Title
 % If the title spans several lines, authors could decide where the title should be split using \\
 % This will cause a warning from the hyperref package, when it sets the title as pdf 'title' metadata
-\title{An Inspiring Title \\ for the MELBA Journal Sample Article}
+\title{An Inspiring Title for the MELBA Journal Sample Article}
 
-% For very long author lists, please contact the publishing editor for instructions publishing-editor@melba-journal.org (this is usually dealt on a case-by-case basis).
 % \firstname and \surname are optionnal, (simply using \name is doable), but can be useful
 % to clarify names such as \firstname FIRSTNAME MIDDLE NAME \surname FAMILYNAME or composed names
-\author{\firstname Adrian V. \surname Dalca \email adalca@mit.edu \\  % start right after \author{, or there will be an extra space
-	\addr EECS, Massachusetts Institute of Technology, Cambridge, MA, USA
-	\AND
-	\name Mert R. Sabuncu\orcid{0000-1111-2222-3333} \email msabuncu@cornell.edu \\
-	\addr School of Electrical and Computer Engineering, Cornell University, Ithaca, NY, USA
+
+% Notice that spacs left out (between name and orcid and affiliations will be displayed)
+\author{
+	\firstname Firstname1 \surname Name1\aff{1,3},
+	\name Firstname2 Name2\aff{2,3}\orcid{0000-1111-2222-3333}
+}
+% Authors are free to use either a new line (\\) or a simple comma (,) between affiliations.
+\affiliations{% <- trailing '%' to avoid unwanted indent
+	\num 1 \addr Melba journal, The Internet, CERN, CH \\
+	\num 2 \addr Melba journal, The Internet, CERN, CH \\
+	\num 3 \addr Melba journal, The Internet, CERN, CH
 }
 
+\abstract{%   <- trailing '%' for backward compatibility of .sty file
+	We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive.
+	%
+	Our code is available at~\url{http://yoururl.com}.}
 
+
+\keywords{Machine Learning, Image Registration}
 
 % Indendation is not mandatory, but usually makes the code more readable
 \begin{document}
 
 % top matter
-\maketitle
-
-% abstract
-\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
-	We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive.
-	%
-	Our code is available at~\url{http://yoururl.com}.
-\end{abstract}
-
-% keywords
-\begin{keywords}
-	Machine Learning, Image Registration
-\end{keywords}
+\twocolumn[\maketitle]
+% comment the preceedings and uncomment the following if the authors list + abstract is longer than one page
+% \maketitle
+% \twocolumn
 
 
 % Introduction (or first section)
+% \rule{\textwidth}{1pt}
 \section{Introduction}
-	A deformable template is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals.
+	\enluminure{A}{deformable} \emph{template} is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,6 +134,18 @@
 		\subsubsection{Subsubsection}
 			\paragraph{Paragraph} Ex culpa ut commodo proident esse excepteur mollit in sed aliqua fugiat sed cupidatat dolor sint quis veniam amet aute ea fugiat quis do excepteur sunt commodo magna cupidatat veniam minim anim mollit do enim et nostrud ad esse velit nisi est dolor do ut dolore excepteur nulla ex sunt exercitation consequat ullamco ad in fugiat ut ut enim adipisicing cillum nisi anim ullamco ullamco nisi esse aute dolore amet nisi adipisicing dolor dolore do ut aliqua in sunt aliqua tempor duis amet ut non adipisicing nostrud ex ullamco excepteur culpa anim est minim fugiat laborum ex irure consectetur eu in reprehenderit sint magna ut consequat laborum ex minim laboris culpa amet incididunt laborum laborum dolore nulla cupidatat dolore in aliqua ut eu in magna sunt eiusmod est labore sit eu incididunt fugiat in culpa pariatur voluptate duis id velit sunt reprehenderit pariatur amet esse dolore minim non fugiat fugiat amet incididunt commodo sit dolor.
 
+			In \verb|itemize| and \verb|enumeration|, longer sentences and text in paragraphs could require manual hyphenation with \verb|-| in case of boxes under- or over-flows:
+			\begin{itemize}
+				\item Ad dolor nisi culpa eu eiusmod sint ut est in nisi quis ut deserunt ut anim ut proident proident officia laborum in.
+				\item Dolore et irure adipisicing ex anim exercitation sit pro-ident mollit.
+			\end{itemize}
+
+			\begin{enumerate}
+				\item Incididunt id cillum mollit officia aliquip id dolor ea reprehenderit ut pariatur consequat dolore adipisicing sit minim minim id irure ullamco nulla occaecat sint ut deserunt tempor aute eiusmod dolor.
+				\item Aliquip sunt in voluptate occaecat ut magna cupidatat sunt duis ut proident consequat.
+			\end{enumerate}
+
+
 \section{Table and Figures}
 	\begin{table}[h] % h for Here, t for Top, b for Bottom
 		\centering
@@ -159,6 +163,12 @@
 		\includegraphics[width=0.5\linewidth]{example-image}
 		\caption{Example figure. Notice that the caption goes below.}
 	\end{figure}
+
+	\begin{figure*}[t]
+		\centering
+		\includegraphics[width=0.8\linewidth, height=.2\textheight]{example-image}
+		\caption{Example figure spanning the two columns.}
+	\end{figure*}
 
 \section{Revision}
 		We provide, in \verb|melba.sty| a helpful command to color modifications after a revision: \verb|\revision{}|. It is automatically de-activated for papers compiled with the \verb|accepted|, \verb|arxiv| or \verb|specialissue| options.

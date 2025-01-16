@@ -1,10 +1,14 @@
-% v1.34 -- 2024/02/28
+% v2.01 -- 2024/04/25
 % For any question, please contact publishing-editor@melba-journal.org
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{melba}
+
+\LoadClass[twoside,11pt]{article}
 
 % This style file was based on the JLMR style file.
-\usepackage{amsmath}
-\usepackage{lineno} % for line numbers. TODO: make this opnly called in submission
-\typeout{Document Style `melba-jmlr' v1.34 -- February 2024.}
+\RequirePackage{amsmath}
+\RequirePackage[switch]{lineno} % for line numbers. TODO: make this opnly called in submission
+\typeout{Document Style `melba-jmlr' v2.01 -- 2024.}
 
 \newif\if@abbrvbib\@abbrvbibfalse
 \DeclareOption{abbrvbib}{\@abbrvbibtrue}
@@ -37,6 +41,11 @@
 \fi
 
 
+\RequirePackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\RequirePackage{lettrine}
+\newcommand{\enluminure}[2]{\lettrine[lines=3, findent=0.5em, nindent=0em]{\textcolor{melba}{#1}}{\bf#2}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             REQUIRED PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,6 +56,11 @@
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+% \RequirePackage{ebgaramond}
+
+
 
 \if@usehyper
 \RequirePackage[hidelinks]{hyperref}
@@ -80,19 +94,27 @@
 
 % Specify the dimensions of each page
 
-\oddsidemargin .25in    %   Note \oddsidemargin = \evensidemargin
-\evensidemargin .25in
-\marginparwidth 0.07 true in
-%\marginparwidth 0.75 true in
-%\topmargin 0 true pt           % Nominal distance from top of page to top of
-%\topmargin 0.125in
-\topmargin -0.5in
-\addtolength{\headsep}{0.25in}
-\textheight 8.5 true in       % Height of text (including footnotes & figures)
-\textwidth 6.0 true in        % Width of text line.
-\widowpenalty=10000
-\clubpenalty=10000
-\@twosidetrue \@mparswitchtrue \def\ds@draft{\overfullrule 5pt}
+% \oddsidemargin .25in    %   Note \oddsidemargin = \evensidemargin
+% \evensidemargin .25in
+% \marginparwidth 0.07 true in
+% %\marginparwidth 0.75 true in
+% %\topmargin 0 true pt           % Nominal distance from top of page to top of
+% %\topmargin 0.125in
+% \topmargin -0.5in
+% \addtolength{\headsep}{0.25in}
+% \textheight 8.5 true in       % Height of text (including footnotes & figures)
+% \textwidth 6.0 true in        % Width of text line.
+% \widowpenalty=10000
+% \clubpenalty=10000
+% \@twosidetrue \@mparswitchtrue \def\ds@draft{\overfullrule 5pt}
+\RequirePackage[paper=a4paper,
+                top=10mm,
+                left=10mm,
+                bottom=10mm,
+                right=10mm,
+                includeheadfoot,
+                % showframe
+                ]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               S E C T I O N S
@@ -151,11 +173,11 @@
 \def\thesection {\arabic{section}}
 \def\thesubsection {\thesection.\arabic{subsection}}
 \def\section{\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}
-             {\large\bf\raggedright}}
+             {\color{melba}\large\bf\raggedright}}
 \def\subsection{\@startsection{subsection}{2}{\z@}{-0.20in}{0.08in}
-                {\normalsize\bf\raggedright}}
+                {\color{melba}\normalsize\raggedright}}
 \def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-0.18in}{0.08in}
-                {\normalsize\sc\raggedright}}
+                {\color{melba}\normalsize\it\raggedright}}
 \def\paragraph{\@startsiction{paragraph}{4}{\z@}{1.5ex plus
   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
 \def\subparagraph{\@startsiction{subparagraph}{5}{\z@}{1.5ex plus
@@ -179,19 +201,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% use \begin{abstract} .. \end{abstract} for abstracts.
-\renewenvironment{abstract}
-{\centerline{\large\bf Abstract}\vspace{0.7ex}%
-  \bgroup\leftskip 20pt\rightskip 20pt\small\noindent\ignorespaces}%
-{\par\egroup\vskip 0.25ex}
+% \renewenvironment{abstract}
+% {\centerline{\large\bf Abstract}\vspace{0.7ex}%
+%   \bgroup\leftskip 20pt\rightskip 20pt\small\noindent\ignorespaces}%
+% {\par\egroup\vskip 0.25ex}
+\def\abstract#1{\gdef\@abstract{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               KEYWORDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% use \begin{keywords} .. \end{keywords} for keywordss.
-\newenvironment{keywords}
-{\vskip 5pt \bgroup \leftskip 20pt \rightskip 20pt \topskip 10pt \small\noindent{\bf Keywords:} }%
-{\par\egroup\vskip 0.25ex}
+% \newenvironment{keywords}
+% {\vskip 5pt \bgroup \leftskip 20pt \rightskip 20pt \topskip 10pt \small\noindent{\bf Keywords:} }%
+% {\par\egroup\vskip 0.25ex}
+\def\keywords#1{\gdef\@keywords{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                        FIRST PAGE, TITLE, AUTHOR
@@ -236,32 +260,65 @@
  \let\maketitle\relax \let\@maketitle\relax
  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
 
-\def\@startauthor{\noindent \normalsize}
-\def\@endauthor{}
+% \def\@startauthor{\noindent \normalsize}
+% \def\@endauthor{}
+\def\affiliations#1{\gdef\@affiliations{#1}}
 \def\@starteditor{\noindent \small {\bf Editor:~}}
 \def\@endeditor{\normalsize}
-\def\@maketitle{\vbox{\hsize\textwidth
+% \def\@maketitle{}
+\def\@maketitle{\hsize\textwidth
  \linewidth\hsize \vskip \beforetitskip
- {\begin{center} \Large\bf \@title \par \end{center}} \vskip \aftertitskip
- {\def\and{\unskip\enspace{\rm and}\enspace}%
-  \def\addr{\scriptsize}%
-  \def\email{\rm\hfill\scriptsize}%
-  \def\name{\normalsize}%
-  \def\firstname{\normalsize}%
-  \def\surname{\sc\normalsize}%
-  \def\AND{\@endauthor\rm\hss \vskip \interauthorskip \@startauthor}%
-  \@startauthor \@author \@endauthor\rm\hss \vskip \interauthorskip  }
+ \if@accepted
+   {\parbox[c]{.3\textwidth}{\includegraphics[width=.3\textwidth]{logo.png}}%
+    \hfill%
+    \parbox[c]{.68\textwidth}{\LARGE Machine Learning\\for Biomedical Imaging}}
+  \fi
+  {\noindent\color{melba}\rule{\textwidth}{5pt}}
+ {\LARGE\bf \@title \par}%
+  {\noindent\color{melba}\rule{\textwidth}{1pt}}
+ {\def\aff{~\reset@font\scriptsize\textsuperscript}%
+  \def\name{\reset@font\normalsize}%
+  \def\firstname{\reset@font\normalsize}%
+  \def\surname{\reset@font\bf\normalsize}%
+   \@author  \reset@font\normalsize}
+
+ \vspace{1em}%
+%
+ \noindent{\def\num{\bf}%
+  \def\addr{\reset@font}%
+   \@affiliations \reset@font\normalsize}
+
+  % \vskip \aftermaketitskip
+
+ \vspace{1em}
+  {\color{melba}\bf Abstract}
+
+  \@abstract
+
+ \vspace{1em}
+  {\color{melba}\bf Keywords}
+
+  \@keywords
+
+ \vspace{1em}
+  {\color{melba}\bf Article informations}
+
+  {\scriptsize%
+    \if@accepted\url{https://doi.org/\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\%
+    \if@accepted Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{https://crossmark.crossref.org/dialog?doi=\@doi&domain=pdf&date_stamp=\@datepublished}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal-eps-converted-to.pdf}}}\\\fi
+    \if@specialissue\@melbaspecialissue\\%
+    \@melbaspecialissueeditors\fi%
+  }
+
+
 
   \vskip \aftermaketitskip
-  
-  %\noindent \@starteditor \@editors \@endeditor
-  \vskip \aftermaketitskip
-}}
+}
 
 %\def\editor#1{\gdef\@editor{#1}}
 %\def\editors#1{\gdef\@editors{#1}}
 
-\def\orcid#1{\textsuperscript{~\tiny\url{https://orcid.org/#1}}}
+\def\orcid#1{\href{https://orcid.org/#1}{\includegraphics[width=.8em]{orcid.png}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -296,37 +353,37 @@
 \if@accepted
   \fancypagestyle{titlepage}{%
     \fancyhf{}
-    \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging~~\@melbaid~~vol.~\@volume,~pp.~\@firstpageno--\pageref{LastPage}\\%
-    \@melbaspecialissue~\\%
-    \@melbaspecialissueeditors}
-    \rhead{\scriptsize Submitted~\@datesubmitted\\~Published~\@datepublished\\
-    ~}
-    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\\url{\@doi}}
-    \renewcommand{\headrulewidth}{0pt}
+    \setlength{\headheight}{0pt}
+    \lhead{}
+    \rhead{}
+    \renewcommand{\headrule}{}
+    \cfoot{\small\thepage}
   }
 \else
   \fancypagestyle{titlepage}{%
     \fancyhf{}
-    \lhead{\scriptsize Journal of Machine Learning for Biomedical Imaging\\%
-    ~\\%
-    }
-    \rhead{\scriptsize In submission\\~\\
-    ~}
-    \lfoot{\scriptsize \copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\~}
-    \renewcommand{\headrulewidth}{0pt}
+    \setlength{\headheight}{11pt}
+    \rhead{}
+    \cfoot{\small\thepage}
+    \renewcommand{\headrule}{}
   }
 \fi
 
 %% Defines the pagestyle for the rest of the pages
 %% Usage: \ShortHeadings{Minimizing Conflicts}{Minton et al}
 %%        \ShortHeadings{short title}{short authors}
+\def\ShortHeadings#1#2{%
+\pagestyle{fancy}%
+\renewcommand{\headrule}{\color{melba}\rule{\textwidth}{1.5pt}}%
+\fancyhead{}%
+\fancyhead[CO]{\small#1}%
+\fancyhead[CE]{\small#2, \@melbayear}%
+\fancyfoot{}
+\fancyfoot[CO]{\hfill\small\thepage}
+\fancyfoot[CE]{\small\thepage\hfill}
+}
 
-\def\ShortHeadings#1#2{\def\ps@melbaps{\let\@mkboth\@gobbletwo%
-\def\@oddhead{\hfill {\small\sc #1} \hfill}%
-\def\@oddfoot{\hfill \small\rm \thepage \hfill}%
-\def\@evenhead{\hfill {\small\sc #2} \hfill}%
-\def\@evenfoot{\hfill \small\rm \thepage \hfill}}%
-\pagestyle{melbaps}}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -366,25 +423,30 @@
    \fi}
 
 
+\RequirePackage{enumitem}
+\setlist[itemize]{leftmargin=1em}
+\setlist[enumerate]{leftmargin=1em}
+
+
 % Define strut macros for skipping spaces above and below text in a
 % tabular environment.
 \def\abovestrut#1{\rule[0in]{0in}{#1}\ignorespaces}
 \def\belowstrut#1{\rule[-#1]{0in}{#1}\ignorespaces}
 
 % Acknowledgments
-\long\def\acks#1{\vskip 0.3in\noindent{\large\bf Acknowledgments}\vskip 0.2in
+\long\def\acks#1{\vskip 0.3in\noindent{\color{melba}\large\bf Acknowledgments}\vskip 0.2in
 	\noindent #1}
 
 % Ethics
-\long\def\ethics#1{\vskip 0.3in\noindent{\large\bf Ethical Standards}\vskip 0.2in
+\long\def\ethics#1{\vskip 0.3in\noindent{\color{melba}\large\bf Ethical Standards}\vskip 0.2in
 \noindent #1}
 
 % COI
-\long\def\coi#1{\vskip 0.3in\noindent{\large\bf Conflicts of Interest}\vskip 0.2in
+\long\def\coi#1{\vskip 0.3in\noindent{\color{melba}\large\bf Conflicts of Interest}\vskip 0.2in
 	\noindent #1}
 
 % Data availability
-\long\def\data#1{\vskip 0.3in\noindent{\large\bf Data availability}\vskip 0.2in
+\long\def\data#1{\vskip 0.3in\noindent{\color{melba}\large\bf Data availability}\vskip 0.2in
   \noindent #1}
 
 % Research Note
@@ -397,7 +459,7 @@
 \def\section{\@ifnextchar*{\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}%
              {\large\bf\raggedright}}%
 {\@startsiction{section}{1}{\z@}{-0.24in}{0.10in}
-             {\large\bf\raggedright Appendix\ }}}}
+             {\color{melba}\large\bf\raggedright Appendix\ }}}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -422,7 +484,9 @@
 % Messy yet redable LaTeX if/elses:
 \if@accepted
   \newcommand{\revision}[1]{#1}
+  \definecolor{melba}{HTML}{4a89a3}
 \else
+  \definecolor{melba}{HTML}{000000}
   \if@arxiv
     \newcommand{\revision}[1]{#1}
   \else
