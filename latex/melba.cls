@@ -306,6 +306,7 @@
   {\scriptsize%
     \if@accepted\url{https://doi.org/\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\%
     \if@accepted Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{https://crossmark.crossref.org/dialog?doi=\@doi&domain=pdf&date_stamp=\@datepublished}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal-eps-converted-to.pdf}}}\\\fi
+    Corresponding author: \href{mailto:\@email}{\@email}\\%
     \if@specialissue\@melbaspecialissue\\%
     \@melbaspecialissueeditors\fi%
   }
@@ -334,6 +335,7 @@
 \def\doi#1{\gdef\@doi{#1}}
 \def\volume#1{\gdef\@volume{#1}}
 \def\melbaauthors#1{\gdef\@melbaauthors{#1}}
+\def\email#1{\gdef\@email{#1}}
 \def\melbayear#1{\gdef\@melbayear{#1}}
 \def\datesubmitted#1{\gdef\@datesubmitted{#1}}
 \def\datepublished#1{\gdef\@datepublished{#1}}
