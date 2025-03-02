@@ -1,4 +1,4 @@
-% v2.01 -- 2024/04/25
+% v2.02 -- 2025/03/02
 % For any question, please contact publishing-editor@melba-journal.org
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{melba}
@@ -401,28 +401,28 @@
 % \def\figurecaption#1#2{\noindent\hangindent 46pt
 %                        \hbox to 41pt {\small\sl #1 \hfil}
 %                        \ignorespaces {\small #2}}
-\def\figurecaption#1#2{\noindent\hangindent 40pt
-                       \hbox to 36pt {\small\sl #1 \hfil}
-                       \ignorespaces {\small #2}}
-% Figurecenter prints the caption title centered.
-\def\figurecenter#1#2{\centerline{{\sl #1} #2}}
-\def\figurecenter#1#2{\centerline{{\small\sl #1} {\small #2}}}
+% \def\figurecaption#1#2{\noindent\hangindent 40pt
+%                        \hbox to 36pt {\small\sl #1 \hfil}
+%                        \ignorespaces {\small #2}}
+% % Figurecenter prints the caption title centered.
+% \def\figurecenter#1#2{\centerline{{\sl #1} #2}}
+% \def\figurecenter#1#2{\centerline{{\small\sl #1} {\small #2}}}
 
-%
-%  Allow ``hanging indents'' in long captions
-%
-\long\def\@makecaption#1#2{
-   \vskip 10pt 
-   \setbox\@tempboxa\hbox{#1: #2}
-   \ifdim \wd\@tempboxa >\hsize               % IF longer than one line:
-       \begin{list}{#1:}{
-       \settowidth{\labelwidth}{#1:}
-       \setlength{\leftmargin}{\labelwidth}
-       \addtolength{\leftmargin}{\labelsep}
-        }\item #2 \end{list}\par   % Output in quote mode
-     \else                                    %   ELSE  center.
-       \hbox to\hsize{\hfil\box\@tempboxa\hfil}  
-   \fi}
+% %
+% %  Allow ``hanging indents'' in long captions
+% %
+% \long\def\@makecaption#1#2{
+%    \vskip 10pt
+%    \setbox\@tempboxa\hbox{#1: #2}
+%    \ifdim \wd\@tempboxa >\hsize               % IF longer than one line:
+%        \begin{list}{#1:}{
+%        \settowidth{\labelwidth}{#1:}
+%        \setlength{\leftmargin}{\labelwidth}
+%        \addtolength{\leftmargin}{\labelsep}
+%         }\item #2 \end{list}\par   % Output in quote mode
+%      \else                                    %   ELSE  center.
+%        \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+%    \fi}
 
 
 \RequirePackage{enumitem}
