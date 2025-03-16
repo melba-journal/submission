@@ -1,4 +1,4 @@
-% v2.02 -- 2025/03/02
+% v2.03 -- 2025/03/17
 % For any question, please contact publishing-editor@melba-journal.org
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{melba}
@@ -45,6 +45,8 @@
 \renewcommand{\familydefault}{\sfdefault}
 \RequirePackage{lettrine}
 \newcommand{\enluminure}[2]{\lettrine[lines=3, findent=0.5em, nindent=0em]{\textcolor{melba}{#1}}{\bf#2}}
+
+\RequirePackage{microtype}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                             REQUIRED PACKAGES
