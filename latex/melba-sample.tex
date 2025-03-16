@@ -115,6 +115,28 @@
 			Awesome proof.
 		\end{proof}
 
+	\subsection{Long equations in two columns}
+		Note that equations can fill the width pretty quickly when there are two columns.
+		Different mathemtical environments, beyond the basic \verb|\begin{equation}| may be of use. Taking as an example the binomial formula which overflows in Eq. \eqref{binom:eq}:
+		\begin{equation}
+			\label{binom:eq}
+			(1+x)^n = \underbrace{(1+x)\times...\times(1+x)}_{n \text{ times}} = \sum_{k=0}^n \binom{n}{k}x^k = \sum_{k=0}^n\frac{n!}{k!(n-k)!}x^k .
+	        \end{equation}
+
+	        The \verb|\begin{multline}| environment is an easy although crude fix:
+	        \begin{multline}
+			(1+x)^n = \underbrace{(1+x)\times...\times(1+x)}_{n \text{ times}} \\
+			= \sum_{k=0}^n \binom{n}{k}x^k \\
+			= \sum_{k=0}^n\frac{n!}{k!(n-k)!}x^k .
+	        \end{multline}
+	        \verb|\begin{align}| tends to give the most control over the final result:
+	        \begin{align}
+			(1+x)^n &= \underbrace{(1+x)\times...\times(1+x)}_{n \text{ times}} \nonumber\\
+			        &= \sum_{k=0}^n \binom{n}{k}x^k \nonumber\\
+			        &= \sum_{k=0}^n\frac{n!}{k!(n-k)!}x^k .
+	        \end{align}
+
+
 	\subsection{Math styles}
 		Different font styles can be used for equations:
 		\begin{itemize}
@@ -123,6 +145,8 @@
 			\item \verb|$\mathfrak{a b c A B C 1 2 3}$|: $ \mathfrak{a b c A B C 1 2 3} $
 			\item \verb|$\mathcal{ABC}$|: $ \mathcal{ABC} $
 			\item \verb|$\mathbb{ABC}$|: $ \mathbb{ABC} $
+			\item \verb|$\mathsf{ABC}$|: $ \mathsf{ABC} $
+			\item \verb|$\mathtt{ABC}$|: $ \mathtt{ABC} $
 		\end{itemize}
 
 		Text and names in equations should be dealt with the \verb|\text| command, for instance:\\
