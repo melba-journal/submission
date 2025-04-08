@@ -106,9 +106,7 @@ Please pay attention to the following fields (`YYYY:NNN` is the MELBA paper ID t
 
 ## Special issues
 The following special issues are currently open for submissions:
-* **[special issue on generative models](https://melba-journal.org/blog/010-special-issue-generative-models.html)** Deadline 2023/08/31
-* **[special issue on image registration](https://melba-journal.org/blog/012-special-issue-image-registration.html)** Deadline 2023/09/01
-
+* **[special issue on Fairness of AI in Medical Imaging (FAIMI)](https://www.melba-journal.org/blog/016-special-issue-faimi.html)** Deadline 2025/04/21
 
 MELBA has currently the following published special issues:
 * **Medical Imaging with Deep Learning (MIDL) 2020**
