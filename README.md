@@ -77,11 +77,11 @@ At every step below where we ask for communication or delivery of a file, please
 
 ### Camera ready
 
-1. Switch the template option to `accepted` in the first lines of the latex: `\usepackage[accepted]{melba}`;
-1. populate the `\melbaheading` command [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L29) with the information provided by the publishing editor;
+1. Switch the class option to `accepted` on the first line: `\documentclass[accepted]{melba}`;
+1. populate the `\melbaid`, `\doi` and subsequent commands [as instructed in the latex comments](https://github.com/melba-journal/submission/blob/master/latex/melba-sample.tex#L24) with the information provided by the publishing editor;
 1. complete the **Ethical Standards** and **Conflicts of Interest** sections at the end of the paper;
 1. upload your final pdf version via the [Discussions](https://help.scholasticahq.com/article/117-how-do-discussions-work) page;
-1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [MELBA website](https://www.melba-journal.1org);
+1. please also provide a representative, high-resolution image of your paper—this will act as a graphical abstract on the [MELBA website](https://www.melba-journal.org);
 1. (Optional) authors can also send a video presentation of their paper, that would be embedded into the website.
 
 
@@ -93,7 +93,7 @@ Please pay attention to the following fields (`YYYY:NNN` is the MELBA paper ID t
 |-------|--------|
 | License | `CC-BY 4.0` |
 | Comment | `Accepted for publication at the Journal of Machine Learning for Biomedical Imaging (MELBA)  https://melba-journal.org/YYYY:NNN` |
-| journal-ref | `Machine.Learning.for.Biomedical.Imaging. 2 (2023)` |
+| journal-ref | `Machine.Learning.for.Biomedical.Imaging. 3 (2025)` |
 | DOI | value communicated by the publishing editor |
 
 
