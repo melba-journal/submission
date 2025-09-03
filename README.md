@@ -105,8 +105,6 @@ Please pay attention to the following fields (`YYYY:NNN` is the MELBA paper ID t
 1. once this is done, **no further updates are permitted** to the arxiv submission, as any update would not have been reviewed by the MELBA journal.
 
 ## Special issues
-The following special issues are currently open for submissions:
-* **[special issue on Fairness of AI in Medical Imaging (FAIMI)](https://www.melba-journal.org/blog/016-special-issue-faimi.html)** Deadline 2025/04/21
 
 MELBA has currently the following published special issues:
 * **Medical Imaging with Deep Learning (MIDL) 2020**
