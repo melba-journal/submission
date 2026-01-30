@@ -32,14 +32,24 @@
 
 \ProcessOptions\relax
 
+\newif\if@final
 \if@accepted
+  \@finaltrue
 \else
-  \if@arxiv
-  \else % not accepted nor arxiv
-    \linenumbers
+  \if@specialissue
+    \@finaltrue
+  \else
+    \@finalfalse
   \fi
 \fi
 
+\if@final
+\else
+  \if@arxiv
+  \else
+    \linenumbers
+  \fi
+\fi
 
 \RequirePackage{lmodern}
 \renewcommand{\familydefault}{\sfdefault}
@@ -270,7 +280,7 @@
 % \def\@maketitle{}
 \def\@maketitle{\hsize\textwidth
  \linewidth\hsize \vskip \beforetitskip
- \if@accepted
+ \if@final
    {\parbox[c]{.3\textwidth}{\includegraphics[width=.3\textwidth]{logo.png}}%
     \hfill%
     \parbox[c]{.68\textwidth}{\LARGE Machine Learning\\for Biomedical Imaging}}
@@ -306,8 +316,8 @@
   {\color{melba}\bf Article informations}
 
   {\scriptsize%
-    \if@accepted\url{https://doi.org/\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\%
-    \if@accepted Volume \@volume, Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{https://crossmark.crossref.org/dialog?doi=\@doi&domain=pdf&date_stamp=\@datepublished}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal-eps-converted-to.pdf}}}\\\fi
+    \if@final\url{https://doi.org/\@doi}\fi\hfill\copyright\@melbayear~\@melbaauthors.~License:~\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\\%
+    \if@final Volume \@volume, Received: \@datesubmitted, Published \@datepublished \hfill \parbox[c]{.2\textwidth}{\href{https://crossmark.crossref.org/dialog?doi=\@doi&domain=pdf&date_stamp=\@datepublished}{\includegraphics[width=.2\textwidth]{CROSSMARK_Color_horizontal-eps-converted-to.pdf}}}\\\fi
     Corresponding author: \href{mailto:\@email}{\@email}\\%
     \if@specialissue\@melbaspecialissue\\%
     \@melbaspecialissueeditors\fi%
@@ -354,7 +364,7 @@
 \fi
 
 % \setlength{\headheight}{3em}
-\if@accepted
+\if@final
   \fancypagestyle{titlepage}{%
     \fancyhf{}
     \setlength{\headheight}{0pt}
@@ -486,7 +496,7 @@
 %                               UTILS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Messy yet redable LaTeX if/elses:
-\if@accepted
+\if@final
   \newcommand{\revision}[1]{#1}
   \definecolor{melba}{HTML}{4a89a3}
 \else
