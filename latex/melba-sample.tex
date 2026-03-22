@@ -22,10 +22,10 @@
 
 % Header and footer (will be filled at publication)
 \melbaid{YYYY:NNN}  % This is provided upon by the publishing editor
-\doi{10.59275/j.melba.2024-AAAA}
+\doi{10.59275/j.melba.2026-AAAA}
 \melbaauthors{Name1 and Name2}  % Note: this one is also used to set the pdf 'authors' metadata
 \email{author@institute.tld}
-\volume{3}
+\volume{2026}
 \firstpageno{1337}  % Communicated by the publishing editor
 \melbayear{YYYY}  % The publication year
 \datesubmitted{yyyy-m1-d1}  % Date submitted to MELBA: mm/yyyy
@@ -34,18 +34,18 @@
 % The following is optionnal, only if you are publishing in a special issue
 % The information is available on the README.md of this repository
 % https://github.com/melba-journal/submission#special-issues
-\melbaspecialissue{Medical Imaging with Deep Learning (MIDL) 2020}
-\melbaspecialissueeditors{Marleen de Bruijne, Tal Arbel, Ismail Ben Ayed, Hervé Lombaert}
+\melbaspecialissue{MICCAI Open Data 2026 x MELBA}
+\melbaspecialissueeditors{AT, MS et al.}
 
 
 % Short headings should be {running head} and {authors last names}
-\ShortHeadings{MELBA Journal Sample Article}{Name1 and Name2}
+\ShortHeadings{MICCAI Open Data 2026 x MELBA Sample Article}{Name1 and Name2}
 
 
 % Title
 % If the title spans several lines, authors could decide where the title should be split using \\
 % This will cause a warning from the hyperref package, when it sets the title as pdf 'title' metadata
-\title{An Inspiring Title for the MELBA Journal Sample Article}
+\title{MICCAI Open Data 2026 x MELBA sample article}
 
 % \firstname and \surname are optionnal, (simply using \name is doable), but can be useful
 % to clarify names such as \firstname FIRSTNAME MIDDLE NAME \surname FAMILYNAME or composed names
@@ -63,12 +63,12 @@
 }
 
 \abstract{%   <- trailing '%' for backward compatibility of .sty file
-	We develop a learning framework for building deformable templates, which play a fundamental role in many image analysis and computational anatomy tasks. Conventional methods for template creation and image alignment to the template have undergone decades of rich technical development. In these frameworks, templates are constructed using an iterative process of template estimation and alignment, which is often computationally very expensive. Due in part to this shortcoming, most methods compute a single template for the entire population of images, or a few templates for  specific sub-groups of the data. In this work, we present a probabilistic model and efficient learning strategy that yields either universal or \textit{conditional} templates, jointly with a neural network that provides efficient alignment of the images to these templates. We demonstrate the usefulness of this method on a variety of domains, with a special focus on neuroimaging. This is particularly useful for clinical applications where a pre-existing template does not exist, or creating a new one with traditional methods can be prohibitively expensive.
-	%
-	Our code is available at~\url{http://yoururl.com}.}
+	This MELBA Resource track is dedicated to resources that can facilitate i) reproducible research within the field of biomedical imaging and ii) fair benchmarking of machine learning algorithms.
+MELBA Resource publications are articles systematically describing publicly available resources, such as i) research datasets and ii) open-source software tools, that reside at the intersection of biomedical imaging and machine learning.
+Our aim is to enhance the sharing and reuse of resources, encourage their broader dissemination and repurposing, as well as acknowledge those who contribute by sharing.}
 
 
-\keywords{Machine Learning, Image Registration}
+\keywords{Melba journal, resource track, open data}
 
 % Indendation is not mandatory, but usually makes the code more readable
 \begin{document}
@@ -79,25 +79,127 @@
 % \maketitle
 % \twocolumn
 
+\section{Background}
+	\enluminure{T}{his} section should provide the background and motivation for the specific “resource”.
 
-% Introduction (or first section)
-% \rule{\textwidth}{1pt}
-\section{Introduction}
-	\enluminure{A}{deformable} \emph{template} is an image that can be geometrically deformed to match images in a dataset, providing a common reference frame. Templates are a powerful tool that enables the analysis of geometric variability. They have been used in computer vision, medical image analysis, graphics, and time series signals.
+	The gap/need in the literature that makes the presented “resource” valuable for ML/AI projects should be indicated.
 
+	Reference to similar “resources”, further highlighting the unaddressed gap or complementing the current “resource”, should also be reported here.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Related works
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Make sure to put your work into context and include apporpriate citations.
-% We do not have limits on citation counts.
-\section{Related Works}
-	Spatial alignment, or registration, between two images is a building block for estimation of deformable templates. Alignment usually involves two steps: a global affine transformation, and a deformable transformation (as in many optical flow applications).
+\section{Summary}
+	This section should summarise the vision, mission, scope, and objectives of the “resource”.
+
+	Who is the target audience? Who does it serve?
+
+	The readiness of the “resource” for use in a medical imaging ML/AI project is expected to be highlighted here. For example, is the presented dataset AI-ready? Does use of the presented tool require programming knowledge? Is the presented tool executable in a low-/zero-code principle?
+
+\section{Discussion}
+	Incididunt dolor dolor ut ut ut laboris ut cupidatat in nisi et voluptate minim culpa culpa in et proident quis dolor elit aliqua velit duis id ad dolore dolore tempor laboris voluptate nulla non dolore id cupidatat ut ut esse ea aliqua dolor non aute occaecat adipisicing elit est minim ullamco sed adipisicing voluptate voluptate ea cupidatat amet mollit incididunt qui enim sit consectetur deserunt amet amet laboris enim voluptate ut reprehenderit anim ullamco esse esse quis in ut in sunt id et quis ut sunt ex pariatur minim laboris excepteur et voluptate magna exercitation incididunt ut dolore esse dolor amet consectetur cupidatat magna ex deserunt ullamco dolore aliquip labore fugiat do deserunt incididunt do occaecat ea culpa adipisicing cillum nisi commodo commodo labore elit esse sunt qui eu dolore dolor ad esse sed reprehenderit do in id adipisicing qui officia ullamco nisi nulla cillum aliqua dolore consectetur dolor pariatur reprehenderit esse laboris ut aute adipisicing amet nulla et officia veniam dolor in commodo consequat magna eu ut labore tempor eiusmod cupidatat aliquip quis sint dolor dolore magna proident quis aliquip do fugiat excepteur exercitation qui voluptate est mollit laboris reprehenderit sed velit do laboris in in magna cupidatat in culpa eiusmod non ex proident irure.
 
 	Use \verb|\cite{}| for reference that is part of the sentence, and \verb|\citep{}| for references in parenthesis. For example, \cite{viola1997alignment} is awesome. Also, this is a citation~\citep{viola1997alignment}.
 
+	\begin{table}[t] % h for Here, t for Top, b for Bottom
+		\centering
+		\caption{By convention, Table caption goes on top.}
+		\begin{tabular}{lcr}
+			\textbf{Left} & \textbf{center} & \textbf{right} \\
+			\hline
+			111 & 222 & 333 \\
+			444 & 555 & 666
+		\end{tabular}
+	\end{table}
+
+	\begin{figure*}[t]
+		\centering
+		\includegraphics[width=0.8\linewidth, height=.2\textheight]{example-image}
+		\caption{Example figure spanning the two columns.}
+	\end{figure*}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{example-image}
+		\caption{Example figure. Notice that the caption goes below.}
+	\end{figure}
 
 
+\section{Resource Availability}
+    \subsection{Summary statement}
+	This section should summarise the importance of the resource (e.g., new datasets for underserved populations), in not more than 4 sentences.
+
+    \subsection{Data/Code Location}
+	Specific link should be added here.
+
+	Examples of repositories are given at the Public Repositories section below.
+
+    \subsection{Potential Use Cases}
+	This section should indicate the potential ML/imaging use cases that the authors envision their resource facilitating and the specific potential clinical domain(s).
+
+    \subsection{Licensing}
+	Clearly describe the licensing terms.
+
+	If there is an existing licence that is followed this could just be a single sentence.
+
+    \subsection{Ethical Considerations}
+	Language referring to associated documentation, e.g., IRB, Informed Consent.
+
+	For human data collection this section must describe the consent or opt-in/out process.
+
+\section{Methods}
+	This section should highlight either (for ‘Data Resource’ papers) all methods/techniques/pipelines that the authors used to prepare the presented data, or (for ‘Tools Resource’ papers) that were included in the presented tool.
+
+    \subsection{Data Details}
+	This section should indicate inclusion criteria, as well as describe any associated demographic, clinical, molecular, and other related details.
+
+    \subsection{Methods Used for the Data Creation}
+	This section is only relevant for ‘Data Resource’ papers.
+
+	All methods and equipment that were used from data acquisition to final processing should be described in detail here.
+
+	Describe the AI-ready state of the dataset. Is it ready to be ingested by a DL algorithm? If not, what are the potential steps that one needs to take for this?
+
+    \subsection{Software stack}
+	This section is only relevant for ‘Tools Resource’ papers.
+
+	A textual description and a graphical illustration must be included here.
+
+    \subsection{Flowchart(s) illustrating the tool’s process flow}
+	This section is only relevant for ‘Tools Resource’ papers.
+
+	For example, this flowchart could be indicative of the ML training procedure in this tool.
+
+	This flowchart does not necessarily need to be a formal Data Flow Diagram
+
+    \subsection{Functionalities (For Tools Resource papers only)}
+	This section is only relevant for ‘Tools Resource’ papers.
+
+\section{Validation}
+    \subsection{Description of approaches ensuring quality of data}
+	This section is only relevant for ‘Data Resource’ papers.
+
+	Subsections included here should be corresponding to the “Methods Used for the Data Creation” subsection above.
+    \subsection{Experimental Design \& Results}
+	This section is only relevant for ‘Tools Resource’ papers.
+
+	Indications of the reproducibility of the code.
+
+	CI/CD - Unit Test code coverage
+
+	Example data from published or unpublished studies
+
+\section{Acknowledgements}
+	Funding and conflicts of interest.
+
+% \section{References}
+
+\bibliography{sample}
+
+% Manual newpage inserted to improve layout of sample file - not
+% needed in general before appendices.
+% \newpage
+
+% Appendix is optional
+\clearpage
+\appendix
 % A methodological, model, or similar section often comes here.
 \section{Methods}
 	\subsection{Equations}
@@ -152,12 +254,15 @@
 		Text and names in equations should be dealt with the \verb|\text| command, for instance:\\
 		\verb|$\mathcal L_{\text{SuperLoss}}$|: $\mathcal L_{\text{SuperLoss}}$ and not $\mathcal L_{SuperLoss}$.
 
-
-
-\section{Section}
-	\subsection{Subsection}
-		\subsubsection{Subsubsection}
-			\paragraph{Paragraph} Ex culpa ut commodo proident esse excepteur mollit in sed aliqua fugiat sed cupidatat dolor sint quis veniam amet aute ea fugiat quis do excepteur sunt commodo magna cupidatat veniam minim anim mollit do enim et nostrud ad esse velit nisi est dolor do ut dolore excepteur nulla ex sunt exercitation consequat ullamco ad in fugiat ut ut enim adipisicing cillum nisi anim ullamco ullamco nisi esse aute dolore amet nisi adipisicing dolor dolore do ut aliqua in sunt aliqua tempor duis amet ut non adipisicing nostrud ex ullamco excepteur culpa anim est minim fugiat laborum ex irure consectetur eu in reprehenderit sint magna ut consequat laborum ex minim laboris culpa amet incididunt laborum laborum dolore nulla cupidatat dolore in aliqua ut eu in magna sunt eiusmod est labore sit eu incididunt fugiat in culpa pariatur voluptate duis id velit sunt reprehenderit pariatur amet esse dolore minim non fugiat fugiat amet incididunt commodo sit dolor.
+\section{Appendix section}
+	\subsection{Appendix subsection}
+		\subsubsection{Appendix subsubsection}
+			\paragraph{Appendix paragraph} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 			In \verb|itemize| and \verb|enumeration|, longer sentences and text in paragraphs could require manual hyphenation with \verb|-| in case of boxes under- or over-flows:
 			\begin{itemize}
@@ -171,88 +276,14 @@
 			\end{enumerate}
 
 
-\section{Table and Figures}
-	\begin{table}[h] % h for Here, t for Top, b for Bottom
-		\centering
-		\caption{By convention, Table caption goes on top.}
-		\begin{tabular}{lcr}
-			\textbf{Left} & \textbf{center} & \textbf{right} \\
-			\hline
-			111 & 222 & 333 \\
-			444 & 555 & 666
-		\end{tabular}
-	\end{table}
+	\subsection{Revision}
+			We provide, in \verb|melba.sty| a helpful command to color modifications after a revision: \verb|\revision{}|. It is automatically de-activated for papers compiled with the \verb|accepted|, \verb|arxiv| or \verb|specialissue| options.
 
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.5\linewidth]{example-image}
-		\caption{Example figure. Notice that the caption goes below.}
-	\end{figure}
+		\revision{
+			\subsubsection{It can also color whole sections and paragraphs}
+				Adipisicing laborum in officia veniam in officia dolor reprehenderit ut ea sed ea reprehenderit veniam veniam culpa commodo velit commodo cillum laborum magna esse duis laboris esse in esse laborum consequat esse cupidatat.
 
-	\begin{figure*}[t]
-		\centering
-		\includegraphics[width=0.8\linewidth, height=.2\textheight]{example-image}
-		\caption{Example figure spanning the two columns.}
-	\end{figure*}
-
-\section{Revision}
-		We provide, in \verb|melba.sty| a helpful command to color modifications after a revision: \verb|\revision{}|. It is automatically de-activated for papers compiled with the \verb|accepted|, \verb|arxiv| or \verb|specialissue| options.
-
-	\revision{
-		\subsection{It can also color whole sections and paragraphs}
-			Adipisicing laborum in officia veniam in officia dolor reprehenderit ut ea sed ea reprehenderit veniam veniam culpa commodo velit commodo cillum laborum magna esse duis laboris esse in esse laborum consequat esse cupidatat.
-
-			Lorem ipsum exercitation voluptate adipisicing esse cupidatat sint do excepteur laboris nisi anim mollit ut adipisicing velit quis sunt minim ut deserunt pariatur id amet elit consectetur incididunt occaecat ad labore sit in magna eiusmod.
-	}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Mandatory Sections. Please complete, especially for final publication
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Acknowledgements.
-% Please include any funding, intellectual contributions not included in the authorship, and any other acknowledgements.
-\acks{This work was supported by grants X, Y and Z. We also acknowledge important conversations with our colleagues A, B and C.}
-
-% Ethical Standards.
-% Please edit with the appropriate ethics considerations for your work. Include any pertinent IRB information, etc.
-%
-% Please note that the submission requirements included:
-% The work presented must follow appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.
-\ethics{The work follows appropriate ethical standards in conducting research and writing the manuscript, following all applicable laws and regulations regarding treatment of animals or human subjects.}
-
-% Conflict of Interest
-% Declaration of possible conflicts of interest: Authors must disclose any financial, organisational, commercial or personal conflicts of interest that might bias their work.
-% If no conflicts, please say "We declare we don't have conflicts of interest."
-\coi{The conflicts of interest have not been entered yet.}
-
-% Data availability
-\data{Authors submitting articles to \textsc{Melba} are required to include a Data Availability Statement in their manuscripts. The Data Availability Statement should clearly indicate whether the data supporting the findings of the study are available and, if so, how readers can access them. If the data are not available, authors should provide a brief justification for not sharing the data.}
-
-\bibliography{sample}
-
-% Manual newpage inserted to improve layout of sample file - not
-% needed in general before appendices.
-% \newpage
-
-% Appendix is optional
-\clearpage
-\appendix
-\section{Proof of the central theorem}
-	In this appendix we prove the central theorem and present additional experimental results.
-	\noindent
-
-
-	{\noindent \em Remainder omitted in this sample. }
-
-\section{Appendix section}
-	\subsection{Appendix subsection}
-		\subsubsection{Appendix subsubsection}
-			\paragraph{Appendix paragraph} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum exercitation voluptate adipisicing esse cupidatat sint do excepteur laboris nisi anim mollit ut adipisicing velit quis sunt minim ut deserunt pariatur id amet elit consectetur incididunt occaecat ad labore sit in magna eiusmod.
+		}
 
 \end{document}
