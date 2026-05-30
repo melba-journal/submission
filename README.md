@@ -133,3 +133,4 @@ MELBA has currently the following published special issues:
 * **Interpretability of Machine Intelligence in Medical Image Computing (iMIMIC) 2023** *Guest editors:* Mauricio Reyes, Jaime Cardoso, Jayashree Kalpathy-Cramer, Nguyen Le Minh, Pedro Abreu, José Amorim, Wilson Silva, Mara Graziani, Amith Kamath
 * **Special issue on Fairness of AI in Medical Imaging (FAIMI)** *Guest editors:* Veronika Cheplygina, Aasa Feragen, Andrew King, Ben Glocker, Enzo Ferrante, Eike Petersen, Esther Puyol-Antón, Melanie Ganz-Benjaminsen
 * **MELBA–BVM 2025 Special Issue** *Guest editors:* Andreas Maier, Thomas Deserno, Heinz Handels, Klaus Maier-Hein, Christoph Palm, Thomas Tolxdorff, Katharina Breininger
+* **Uncertainty for Safe Utilization of Machine Learning in Medical Imaging (UNSURE) 2025** *Guest editors:* Mobarak Hoque, Raghav Mehta, Cheng Ouyang, Chen Qin, Marianne Rakic, Sandy Wells
